@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="zh-CN">
+<meta name="Keywords" content="SuperSlide,jQuery标签切换效果,Tab切换效果">
+<meta name="Description" content="SuperSlide 致力于解决网站大部分特效展示问题，使网站代码规范整洁，方便维护更新。网站上常用的“焦点图/幻灯片”、“Tab标签切换”、“图片滚动”、“无缝滚动”等等只需要一个SuperSlide即可解决！还可以多个SuperSlide组合创造更多效果">
+<title>SuperSlide - Tab切换效果</title>
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+
+<body>
+<style type="text/css">
+		/* 本例子css */
+		body { background: #F5F5F5; }
+.login { width: 100%; height: 682px; }
+.login .login_top { width: 985px; height: 100%; margin: 0 auto; border: 1px solid rgba(0,0,0,1); margin-top: 24px; }
+.login .login_top img { margin-left: 10px; float: left; }
+.login .login_top p { margin-left: 20px; display: inline-block; height: 40px; line-height: 40px; border-left: 1px solid #ddd; color: #6c6c6c; padding: 0px 15px; font-size: 22px; margin-top: 12px; }
+
+		.slideTxtBox{ width:985px;height:585px; border:1px solid #ddd; margin:0 auto;   }
+		.slideTxtBox .hd{ width:985px; height:37px;  line-height:30px;   position:relative; }
+		.slideTxtBox .hd ul{ display:block width:767px; height:37px;margin-left:218px; }
+		.slideTxtBox .hd ul .la{ float:left; width:130px; height:37px; border:1px solid #D5D5D5; border-bottom:0 none; cursor:pointer;/*光标*/ margin-right:10px;  }
+		.slideTxtBox .hd ul .la a{ font-size:14px; padding:2px 35px; color:rgba(0,0,0,1); font-weight:600;}
+		.slideTxtBox .hd ul .lc{ float:right; width:151px; height:34px;}
+		.slideTxtBox .hd ul .lc p{ font-size:13px; padding-top:12px;}
+		.slideTxtBox .hd ul .la.on { height:37px; width:130px;  background:#fff;   border-top:2px solid #cc0e3c; border-bottom:2px solid #fff; }
+		.slideTxtBox .hd ul .la.on a{color:#D7063B;}
+
+		</style>
+          <div class="login_center"> 
+            <div class="login_top"> <img src="../images/fnw.png">
+    <p>欢迎注册</p>
+  </div>
+<div class="slideTxtBox">
+  <div class="hd">
+    <ul>
+      <li class="la">
+        <a href="#">手机注册</a>
+      </li>
+      <li class="la">
+        <a href="#">邮箱注册</a>
+      </li>
+       <li class="lc">
+       <p>我已注册，马上<a href="#">登录></a></p>
+      </li>
+    </ul>
+  </div>
+  <div class="bd">
+    <ul>
+      <form style="padding-left:10px; border-top:1px solid #d1dad5; margin-top:-1px; ">
+        <input type="tel" style="padding:3px 0; width:180px; margin-top:10px;" placeholder="请输入手机号"/>
+        <select name="select" style=" padding:3px 0; width:180px;margin-top:10px;">
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+          <option value="40">40</option>
+          <option value="50" selected>50</option>
+          <option value="100">100</option>
+          <option value="200">200</option>
+          <option value="300">300</option>
+          <option value="400">400</option>
+        </select>
+        <p style="font-size:12px; margin-top:5px;">售价<span style="color:#cc0e3c;">￥49.9元-49.95元</span></p>
+        <input type="submit" value="立即充值" style="width:80px; height:28px; background:#cc0e3c; color:#fff; margin-top:25px;">
+      </form>
+    </ul>
+    <ul>
+      <form style="padding-left:10px; border-top:1px solid #d1dad5; margin-top:-1px; ">
+        <input type="tel" style="padding:3px 0; width:180px; margin-top:10px;" placeholder="请输入手机号"/>
+        <select name="select" style=" padding:3px 0; width:180px;margin-top:10px;">
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+          <option value="40">40</option>
+          <option value="50" selected>50</option>
+          <option value="100">100</option>
+          <option value="200">200</option>
+          <option value="300">300</option>
+          <option value="400">400</option>
+        </select>
+        <p style="font-size:12px; margin-top:5px;">售价<span style="color:#cc0e3c;">￥49.9元-49.95元</span></p>
+        <input type="submit" class="lj" value="立即充值" style="width:80px; height:28px; background:#cc0e3c; color:#fff; margin-top:25px;">
+      </form>
+    </ul>
+  </div>
+</div>
+
+</div>
+<script type="text/javascript">jQuery(".slideTxtBox").slide();</script>
+</body>
+</html>
+<script type="text/javascript">
+//百度统计代码
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fa630f96b6a9dd549675d26373853f7f1' type='text/javascript'%3E%3C/script%3E"));
+</script>

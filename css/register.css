@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+.register { width: 100%; height: 80px; }
+.register .register_top { width: 1060px; height: 100%; margin: 0 auto; }
+.register .register_top img { margin: 10px 0; }
+.register_centre { width: 100%; height: 494px; background: #E9E9E9; position:relative;}
+.register_centre .register_banner { height: 100%; }
+.register_centre .register_banner img { margin: 40px 0; }
+.register_centre .register_banner .register_right { width: 345px; height: 385px; background: #FFF; float: right; position: absolute;; right:50%; top:50px; right:500px; }
+.register_centre .register_banner .register_right .register_center { width: 305px; height: 365px; margin: 20px 20px 0; }
+.register_centre .register_banner .register_right .register_center h1 { color: #666666; font-size: 16px; font-weight: 300; }
+.register_centre .register_banner .register_right .safe { font-size: 12px; color: #666666; width: 106px; height: 18px; padding: 0 10px; display: block; border: 1px solid #FFD8A4; position: absolute; left: 180px; top: 10px; ; }
+.register_centre .register_banner .register_right h1 { display: block; margin-top: 20px; }
+.register_centre .register_banner form { margin-top: 47px; width: 305px; height: 194px; }
+.register_centre .register_banner form a:hover { text-decoration: underline; }
+.register_centre .register_banner .register_right .rigister_bottom { font-size: 13px; width: 345px; height: 40px; padding: 10px 20px; margin-left: -20px; background: #F5F5F5; margin-top: 24px; }
+.register_centre .register_banner .register_right .rigister_bottom .sj_yzm { float: left; }
+.register_centre .register_banner .register_right .rigister_bottom .sj_yzm a { color: #666666; }
+.register_centre .register_banner .register_right .rigister_bottom .zc { float: right; }
+.register_centre .register_banner .register_right .rigister_bottom .zc a { color: #D7063B; }
+.register_centre .register_banner .register_right .rigister_bottom .zc a span { margin-right: 5px; border: 1px solid #D7063B; display: inline-block; line-height: 15px; text-align: center; width: 16px; height: 16px; border-radius: 50%; }
+.register_centre .register_banner .register_right .partners { margin-left: -20px; width: 345px; height: 40px; padding: 10px 20px; background: #EEEEEE; }
+.register_centre .register_banner .register_right .partners p { color: #666666; font-size: 12px; }
+.register_centre .register_banner .register_right .partners .qq { display: block; width: 20px; height: 20px; background: url(../images/qq.png) no-repeat 0 0; float: left; margin: 0 10px; }
+.register_centre .register_banner .register_right .partners .qq:hover { display: block; width: 20px; height: 20px; background: url(../images/qq.png) no-repeat -20px 0; }
+.register_centre .register_banner .register_right .partners .wx { display: block; width: 20px; height: 20px; background: url(../images/qq.png) no-repeat 0 -20px; float: left; }
+.register_centre .register_banner .register_right .partners .wx:hover { display: block; width: 20px; height: 20px; background: url(../images/qq.png) no-repeat -20px -20px; }
+.register_centre .register_banner .register_right .qh{ position:absolute; left:284px; top:-40px;}
+.register_centre .register_banner #gua:target{ display: none; }
+.register_centre .register_banner #gu:target{ display: none; }

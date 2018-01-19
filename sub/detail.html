@@ -1,0 +1,909 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link  rel="shortcut icon"  href="../favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="../css/base.css">
+<link rel="stylesheet" type="text/css" href="../css/detail.css">
+<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="../js/shop_goodPic_base.js"></script>
+<script type="text/javascript" src="../js/lib.js"></script>
+<script type="text/javascript" src="../js/163css.js"></script>
+<title>详情</title>
+<!--<style type="text/css">
+.crumbs { height: 36px; border-top: 2px solid rgba(0,0,0,1); }
+.crumbs ul { height: 100%; }
+.crumbs ul li { float: left; line-height: 36px; padding-right: 15px; font-size: 14px; }
+.crumbs ul li a { color: rgba(0,0,0,1); }
+/*面包屑*/
+.details_wrap { min-height: 600px; padding: 10px 0; box-sizing: border-box; }
+.details_left { width: 400px; height: 426px; float: left; }
+#preview { float: none; margin: 0px auto; text-align: center; width: 400px; border: 1px solid #ccc; }
+.jqzoom { width: 398px; height: 398px; position: relative; padding: 2px; }
+.zoomdiv { left: 859px; height: 400px; width: 400px; }
+.list-h li { float: left; }
+#spec-n5 { width: 350px; height: 73px; padding-top: 6px; overflow: hidden; margin-left: 25px; }
+#spec-left { background: url(../images1/left.gif) no-repeat; width: 10px; height: 45px; float: left; cursor: pointer; margin-top: 5px; }
+#spec-right { background: url(../images1/right.gif) no-repeat; width: 10px; height: 45px; float: left; cursor: pointer; margin-top: 5px; }
+#spec-list { width: 325px; float: left; overflow: hidden; margin-left: 2px; display: inline; }
+#spec-list ul li { float: left; margin-right: 0px; display: inline; width: 62px; }
+#spec-list ul li img { padding: 2px; border: 1px solid #ccc; width: 50px; height: 50px; }
+/*jqzoom*/
+.jqzoom { position: relative; padding: 0; }
+.zoomdiv { z-index: 100; position: absolute; top: 1px; left: 0px; width: 400px; height: 400px; background: url(i/loading.gif) #fff no-repeat center center; border: 1px solid #e4e4e4; display: none; text-align: center; overflow: hidden; }
+.bigimg { width: 800px; height: 800px; }
+.jqZoomPup { z-index: 10; visibility: hidden; position: absolute; top: 0px; left: 0px; width: 50px; height: 50px; border: 1px solid #aaa; background: #FEDE4F 50% top no-repeat; opacity: 0.5; -moz-opacity: 0.5; -khtml-opacity: 0.5; filter: alpha(Opacity=50); cursor: move; }
+#spec-list { position: relative; width: 322px; margin-right: 6px; }
+#spec-list div { margin-top: 0; margin-left: -30px; *margin-left:0;
+}
+.details_infor { width: 589px; float: left; }
+.details_infor a:hover { text-decoration: underline; }
+.details_infor .details_infor_top { width: 589px; height: 94px; border: 1px solid #DEDEDE; border-left: 0 none; }
+.details_infor .details_infor_top p { font-size: 16px; font-weight: 600; margin-left: 20px; margin-top: 15px; }
+.details_infor .details_infor_centent { width: 589px; border: 1px solid #DEDEDE; border-left: 0 none; }
+.details_infor .details_infor_centent ul { margin: 15px 5px; }
+.details_infor .details_infor_centent ul .b { height: 18px; padding-top: 8px; background: rgba(255,153,255,0.3) }
+.details_infor .details_infor_centent ul .b p { font-size: 12px; float: right; color: #9C9C9C; padding-right: 10px; }
+.details_infor .details_infor_centent ul .b p a { color: rgba(0,51,255,1); }
+.details_infor .details_infor_centent ul .c { height: 49px; line-height: 49px; background: rgba(255,153,255,0.3) }
+.details_infor .details_infor_centent ul .c i { padding-right: 10px; padding-left: 15px; }
+.details_infor .details_infor_centent ul .d { margin-top: 20px; height: 24px; }
+.details_infor .details_infor_centent ul .d p { font-size: 12px; color: #9C9C9C; }
+.details_infor .details_infor_centent ul .d .dd { float: left; margin-left: 14px; }
+.details_infor .details_infor_centent ul .d .dd i { width: 26px; height: 15px; background: rgba(204,0,0,1); color: rgba(255,255,255,1); }
+.details_infor .details_infor_centent ul .d .ddd { float: right; margin-right: 14px; }
+.details_infor .details_infor_centent ul .e { height: 33px; line-height: 33px; margin-top: 8px; margin-left: 14px; }
+.details_infor .details_infor_centent ul .e i { float: left; font-size: 12px; color: #9C9C9C; padding-right: 20px; }
+.details_infor .details_infor_centent ul .e .gw_num { border: 1px solid #dbdbdb; width: 110px; line-height: 26px; overflow: hidden; }
+.details_infor .details_infor_centent ul .e .gw_num em { display: block; height: 26px; width: 26px; float: left; color: #7A7979; border-right: 1px solid #dbdbdb; text-align: center; cursor: pointer; font-style: normal; }
+.details_infor .details_infor_centent ul .e .gw_num .num { display: block; float: left; text-align: center; width: 52px; font-style: normal; font-size: 14px; line-height: 24px; border: 0; }
+.details_infor .details_infor_centent ul .e .gw_num em.add { border-right: 0; border-left: 1px solid #dbdbdb; }
+.details_infor .details_infor_centent ul .f { margin: 45px 88px; }
+.details_infor .details_infor_centent ul .f button { width: 161px; height: 49px; background: rgba(204,0,51,1); cursor: pointer; }
+.details_infor .details_infor_centent ul .f button i { font-size: 20px; color: rgba(255,255,255,1); }
+.details_infor .details_infor_centent ul .g { margin-left: 15px; margin-right: 15px; margin-top: 95px; border-top: 1px dashed #9C9C9C; }
+.details_infor .details_infor_centent ul .g span { font-size: 12px; color: #9C9C9C; }
+.details_infor .details_infor_centent ul .g p { font-size: 12px; color: #9C9C9C; margin-top: 24px; }
+.details_right_a { width: 180px; border: 1px solid #DEDEDE; border-left: 0 none; float: left; text-align: center; }
+.details_right_a ul li { margin-bottom: 5px; }
+.details_right_a .left { height: 36px; background: #F1F1F1; line-height: 36px; }
+.details_right_a .left p { font-size: 12px; padding: 0 10px; }
+/*下左*/
+.detail_center_left .detail_con_left { float: left; }
+.detail_center_left .detail_con_left .daa { box-sizing: border-box; width: 210px; border: 1px solid #DDDDDD; }
+.detail_center_left .detail_con_left .daa .da { height: 36px; background: rgba(204,204,204,1); line-height: 36px; }
+.detail_center_left .detail_con_left .daa .da p { padding-left: 20px; font-size: 13px; font-weight: 600; }
+.detail_center_left .detail_con_left .daa .db { height: 68px; }
+.detail_center_left .detail_con_left .daa .db p { width: 96px; height: 24px; float: left; padding-top: 10px; }
+.detail_center_left .detail_con_left .daa .db p a { padding-left: 15px; }
+/*选项卡*/
+.detail_center_left .detail_con_left .dbb .da { height: 36px; background: rgba(204,204,204,1); line-height: 36px; }
+.detail_center_left .detail_con_left .dbb .da .xf { padding-left: 20px; font-size: 13px; font-weight: 600; }
+.detail_center_left .detail_con_left .dbb .slideTxtBox { border: 1px solid rgba(0,0,0,1); width: 210px; border: 1px solid #ddd; text-align: left; }
+.detail_center_left .detail_con_left .dbb .slideTxtBox .hd { height: 30px; line-height: 30px; background: #f4f4f4; border-bottom: 1px solid #ddd; position: relative; }
+.detail_center_left .detail_con_left .dbb .slideTxtBox .hd ul { float: left; position: absolute; top: -1px; height: 32px; }
+.detail_center_left .detail_con_left .dbb .slideTxtBox .hd ul li { float: left; background: #DDDDDD; cursor: pointer; margin-top: 20px; margin-right: 5px; margin-left: 5px; text-align: center; }
+.detail_center_left .detail_con_left .dbb .slideTxtBox .hd ul li p { font-size: 12px; width: 58px; height: 26px; }
+.detail_center_left .detail_con_left .dbb .slideTxtBox .hd ul li.on { height: 30px; background: #fff; border: 1px solid #ddd; border-bottom: 2px solid #fff; }
+.detail_center_left .detail_con_left .dbb .slideTxtBox .hd ul li.on p { color: rgba(204,0,51,1); }
+.detail_center_left .detail_con_left .dbb .slideTxtBox .bd ul { padding: 15px 0; zoom: 1; margin-bottom: 40px; }
+.detail_center_left .detail_con_left .dbb .slideTxtBox .bd ul .bda { height: 36px; margin-top: 20px; background: rgba(204,204,204,1); line-height: 36px; }
+.detail_center_left .detail_con_left .dbb .slideTxtBox .bd ul .bda p { padding-left: 20px; font-size: 13px; font-weight: 600; }
+.detail_center_left .detail_con_left .dbb .slideTxtBox .bd ul .bdb p { margin-top: 10px; width: 96px; height: 24px; float: left; padding-top: 10px; }
+.detail_center_left .detail_con_left .dbb .slideTxtBox .bd ul .bdb p a { display: block; padding-left: 15px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+.detail_center_left .detail_con_left .dbb .slideTxtBox .bd ul .bdc { height: 36px; margin-top: 200px; background: rgba(204,204,204,1); line-height: 36px; }
+.detail_center_left .detail_con_left .dbb .slideTxtBox .bd ul .bdc p { padding-left: 20px; font-size: 13px; font-weight: 600; }
+.detail_center_left .detail_con_left .dbb .slideTxtBox .bd ul .bdd p { width: 96px; height: 24px; float: left; padding-top: 10px; }
+.detail_center_left .detail_con_left .dbb .slideTxtBox .bd ul .bdd p a { display: block; padding-left: 15px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; margin-bottom: 100px; }
+.detail_center_left .detail_con_left .dbb .slideTxtBox .bd ul .bde { width: 188px; height: 80px; overflow: hidden; margin-top: 10px; }
+.detail_center_left .detail_con_left .dbb .slideTxtBox .bd ul .bde p { font-size: 12px; }
+.detail_center_left .detail_con_left .dbb .slideTxtBox .bd ul .bde .bdea { float: left; }
+.detail_center_left .detail_con_left .dbb .slideTxtBox .bd ul .bde .bdeb { float: right; }
+.detail_center_left .detail_con_left .dbb .slideTxtBox .bd ul .bde .bdeb a { display: block; width: 118px; height: 28px; line-height: 20px; }
+.detail_center_left .detail_con_left .dbb .slideTxtBox .bd ul .bde .bdeb span { color: rgba(204,0,0,1); }
+/*下右*/
+.detail_center_left .detail_con_right .slideTxtBox { width: 970px; float: left; }
+.detail_center_left .detail_con_right .slideTxtBox .hd { width: 970px; height: 37px; line-height: 30px; position: relative; z-index: 100; }
+.detail_center_left .detail_con_right .slideTxtBox .hd ul {
+display:block width:767px; height: 37px; margin-left: 10px; border-bottom: 1px solid #D7063B; }
+.detail_center_left .detail_con_right .slideTxtBox .hd ul .la { float: left; background: #DDDDDD; width: 130px; height: 36px; border: 1px solid #D5D5D5; cursor: pointer;/*光标*/ }
+.detail_center_left .detail_con_right .slideTxtBox .hd ul .la p { font-size: 14px; padding: 2px 25px; text-align: center; color: rgba(0,0,0,1); font-weight: 600; }
+.detail_center_left .detail_con_right .slideTxtBox .hd ul .la.on { height: 37px; width: 130px; background: #D7063B; border-top: 2px solid #cc0e3c; border-bottom: 2px solid #D7063B; }
+.detail_center_left .detail_con_right .slideTxtBox .hd ul .la.on p { color: rgba(255,255,255,1); ; }
+.detail_center_left .detail_con_right .slideTxtBox .aaaa { width: 960px; margin-left: 10px; margin-top: -1px; border: 1px solid #D5D5D5; background: rgba(255,255,255,1); }
+.detail_center_left .detail_con_right .slideTxtBox .aaaa .bd ul .sa { margin-left: 15px; font-size: 14px; font-weight: 700; margin-top: 20px; }
+.detail_center_left .detail_con_right .slideTxtBox .aaaa .bd ul .sb { margin-left: 15px; height: 48px; margin-top: 10px; }
+.detail_center_left .detail_con_right .slideTxtBox .aaaa .bd ul .sb p { width: 295px; height: 24px; font-size: 12px; float: left; }
+.detail_center_left .detail_con_right .slideTxtBox .aaaa .bd ul .sc { height: 40px; margin-right: 15px; margin-left: 15px; border-bottom: 1px dashed #DDDDDD; }
+.detail_center_left .detail_con_right .slideTxtBox .aaaa .bd ul .sc p { float: right; padding-bottom: 20px; }
+.detail_center_left .detail_con_right .slideTxtBox .aaaa .bd ul .sc p a { color: rgba(0,51,255,1); }
+.detail_center_left .detail_con_right .slideTxtBox .aaaa .bd ul .s { margin-left: 100px; }
+.detail_center_left .detail_con_right .slideTxtBox .aaaa .bd ul .s img { vertical-align: bottom;/*除去li与img中间的4px的间隔*/ }
+.detail_center_left .detail_con_right .slideTxtBox .aaaa .bd .z table p { padding-left: 20px; font-size: 12px; }
+.detail_center_left .detail_con_right .slideTxtBox .aaaa .bd .z table td { height: 33px; }
+.detail_center_left .detail_con_right .slideTxtBox .aaaa .bd .o li p { margin: 20px; font-size: 12px; height: 26px; }
+.detail_center_left .detail_con_right .slideTxtBox .aaaa .bd .o li .oo { font-weight: 700; margin-top: 30px; margin-bottom: 30px; }
+</style>-->
+</head>
+
+<body>
+<div class="top">
+  <div class="top_frame">
+    <div class="top_enter">
+      <p><a href="#">Hi，请登录</a></p>
+      <p><a href="#" style="color:#d7063b">免费注册</a><span>&nbsp;|&nbsp;</span></p>
+    </div>
+    <div class="top_entera">
+      <dl>
+        <p style="font-size:12px; color:#666666">送货至：</p>
+        <a href="#" style="display:block;">上海<i class="fa fa-angle-down zz"></i></a>
+        <div class="submenu">
+          <ul id="site_left">
+            <li>
+              <p>A</p>
+              <a href="#">安徽</a></li>
+            <li>
+              <p>B</p>
+              <a href="#">北京</a></li>
+            <li>
+              <p>C</p>
+              <a href="#">重庆</a></li>
+            <li>
+              <p>F</p>
+              <a href="#">福建</a></li>
+            <li>
+              <p>G</p>
+              <a href="#">广东</a><a href="#">广西</a><a href="#">贵州</a><a href="#">甘肃</a></li>
+            <li>
+              <p>H</p>
+              <a href="#">河北</a><a href="#">黑龙江</a><a href="#">海南</a><a href="#">湖北</a><a href="#">湖南</a><a href="#">河南</a></li>
+            <li>
+              <p>J</p>
+              <a href="#">江苏</a><a href="#">吉林</a><a href="#">江西</a></li>
+            <li>
+              <p>L</p>
+              <a href="#">辽宁</a></li>
+          </ul>
+          <ul id="site_right">
+            <li>
+              <p>N</p>
+              <a href="#">内蒙古西</a><a href="#">内蒙古东</a><a href="#">宁夏</a></li>
+            <li>
+              <p>Q</p>
+              <a href="#">青海</a></li>
+            <li>
+              <p>S</p>
+              <a href="#">上海</a><a href="#">山东</a><a href="#">山西</a><a href="#">四川</a><a href="#">陕西</a></li>
+            <li>
+              <p>T</p>
+              <a href="#">天津</a></li>
+            <li>
+              <p>X</p>
+              <a href="#">西藏</a><a href="#">新疆</a></li>
+            <li>
+              <p>Y</p>
+              <a href="#">云南</a></li>
+            <li>
+              <p>Z</p>
+              <a href="#">浙江</a></li>
+          </ul>
+        </div>
+      </dl>
+    </div>
+    <div class=" t">
+      <ul>
+        <li><a href="#">关注我们：</a></li>
+        <li><a href="#"><i></i></a></li>
+        <li><a href="#"><span></span></a>
+          <div class="weixin" style="text-align:center; line-height:20px;">
+            <p style="font-size:12px;">扫描二维码</p>
+            <p style="font-size:12px;">关注飞牛网官方微信</p>
+            <a href="#"><img src="../images/weixin.png"></a> </div>
+        </li>
+      </ul>
+    </div>
+    <div class="right">
+      <ul>
+        <li>
+          <p id="fei"><a href="#">我的飞牛<i class="fa fa-angle-down zz"></i></a></p>
+          <p><span>&nbsp;|&nbsp;</span></p>
+          <div class="my">
+            <dl>
+              <p><a href="#"><img src="../images/head-pic.png"></a><a class="log" href="#">你好，请登录</a></p>
+            </dl>
+            <dl>
+              <dd><a href="#">账户余额</a><a href="#">我的购物卡</a><a href="#">我的优惠券</a><a href="#">我的积分</a></dd>
+              <dd><a href="#">待处理订单</a><a href="#">我的收藏</a><a href="#">我的评价</a></dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <p><a href="#">我的订单</a><span>&nbsp;|&nbsp;</span></p>
+        </li>
+        <li style="margin-left:15px;"><span style="display:inline-block; width: 11px; height: 18px; background: url(images/fn_g_header.png) no-repeat -36px -96px;margin-right:5px;margin-top:8px; position:absolute; left:-7px;"></span><a href="#" style="color:#d7063b;">卡卷充值</a><span>&nbsp;|&nbsp;</span></li>
+        <li>
+          <p id="shouji"><i class="fa fa-mobile" aria-hidden="true" style="font-size:20px;  "></i><a id="shouji" href="#">手机飞牛网<i class="fa fa-angle-down zz" style="padding-left: 5px;"></i></a></p>
+          <p><span>&nbsp;|&nbsp;</span></p>
+          <div class="phone">
+            <dl>
+              <a href="#"><img src="../images/feiniu.jpg"></a>
+            </dl>
+            <dl>
+              <p class="sao" style="font-size:12px; margin-left:4px;">扫一扫，下载飞牛客户端</p>
+              <p style="font-size:12px; margin-left:4px;">首次登录APP送5元优惠券</p>
+              <p style="margin-top:15px; margin-left:15px;"><a href="#"><i></i></a><a href="#"><span></span></a></p>
+            </dl>
+          </div>
+        </li>
+        <li><a href="#">积分商城</a><span>&nbsp;|&nbsp;</span> </li>
+        <li>
+          <p id="f"><a href="#">客户服务</a><i class="fa fa-angle-down zz" style=""></i></p>
+          <p><span>&nbsp;|&nbsp;</span></p>
+          <div class="server"> <a href="#">帮助中心</a><a href="#">在线客服</a> </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="search">
+    <div class="gif"> <img src="../images/fnw.png"> <img src="../images/a.gif"> </div>
+    <div class="search_k"> <i class="fa fa-search" aria-hidden="true" style="font-size:21px; color:#dedede; padding:8px;"></i>
+      <form class="search_news"  style=" float:right; ">
+        <input type="text" style="width:405px; height:34px; font-size:15px; border:none; ">
+        <input type="hidden" class="search_a" disabled="disabled" name="cpseq">
+        <a href="#">
+        <button class="search_b" style="width:100px; height:38px; background:#d7063b; border:2px solid #d7063b; display:block; margin-top:-2px; float:right; color:#FFF; font-size:20px;" >搜索</button>
+        </a>
+      </form>
+      <div class="recommend"> <a href="#">酸奶</a><a href="#">抽纸</a><a href="#">冬装热卖</a><a href="#">面膜</a><a href="#">三段</a><a href="#">进口食品</a><a href="#">生鲜馆</a> </div>
+    </div>
+    <div class="shop">
+      <li>
+        <p><span>我的购物车</span><i class="fa fa-shopping-cart xx" aria-hidden="true">(0)</i></p>
+        <div class="shopa"><i class="fa fa-shopping-cart" aria-hidden="true" style="font-size:40px; color:#cccccc;"></i>
+          <h1 style="font-size:12px; color:#cccccc;">购物车中没有飞牛商品哟！</h1>
+        </div>
+      </li>
+    </div>
+  </div>
+</div>
+<!--第二部分-->
+<div class="menu">
+  <div class="menu_a">
+    <div class="left_top">
+      <p class="del"><i class="fa fa-list-ul"></i><span>全部商品分类</span></p>
+      <div class="leftSidebar">
+        <ul>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">生活食品、冷藏冷冻</a></span>
+            <div class="leftSidebar_submenu">
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果</a><a href="#">奇异果/猕猴桃/凤梨</a><a href="#">梨榴莲</a><a href="#">山竹/浆果</a><a href="#">莓类/热带水果/椰子类/车厘子</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果</a><a href="#">奇异果/猕猴桃/凤梨</a><a href="#">山竹/浆果</a><a href="#">莓类/热带水果/椰子类/车厘子</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃/凤梨</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+              </div>
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+              </div>
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">梨榴莲</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+              </div>
+              <div class="one"></div>
+            </div>
+          </li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">食品、饮料、酒水</a> </span>
+            <div class="leftSidebar_submenu">
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果</a><a href="#">奇异果/猕猴桃/凤梨</a><a href="#">梨榴莲</a><a href="#">山竹/浆果</a><a href="#">莓类/热带水果/椰子类/车厘子</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果</a><a href="#">奇异果/猕猴桃/凤梨</a><a href="#">山竹/浆果</a><a href="#">莓类/热带水果/椰子类/车厘子</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃/凤梨</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+              </div>
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">梨榴莲</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+              </div>
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+              </div>
+              <div class="one"></div>
+            </div>
+          </li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">进口好货、进口食品</a></span>
+            <div class="leftSidebar_submenu">
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果</a><a href="#">奇异果/猕猴桃/凤梨</a><a href="#">梨榴莲</a><a href="#">山竹/浆果</a><a href="#">莓类/热带水果/椰子类/车厘子</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果</a><a href="#">奇异果/猕猴桃/凤梨</a><a href="#">山竹/浆果</a><a href="#">莓类/热带水果/椰子类/车厘子</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃/凤梨</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+              </div>
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">梨榴莲</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+              </div>
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">梨榴莲</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+              </div>
+              <div class="one"></div>
+            </div>
+          </li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">美容洗护、个人护理</a></span>
+            <div class="leftSidebar_submenu">
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果</a><a href="#">奇异果/猕猴桃/凤梨</a><a href="#">梨榴莲</a><a href="#">山竹/浆果</a><a href="#">莓类/热带水果/椰子类/车厘子</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果</a><a href="#">奇异果/猕猴桃/凤梨</a><a href="#">山竹/浆果</a><a href="#">莓类/热带水果/椰子类/车厘子</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃/凤梨</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+              </div>
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">梨榴莲</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+              </div>
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">梨榴莲</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+              </div>
+              <div class="one"></div>
+            </div>
+          </li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">家清纸品、厨具餐具</a></span></li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">家纺、家居、家装</a></span></li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">女装、内衣、腕表配饰</a></span></li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">汽配、车载用品</a></span></li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">母婴、童装、玩具</a></span></li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">男装、运动、户外</a></span></li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">鞋靴、箱包、奢侈品</a></span></li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">图书、文具、电教</a></span></li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">保健、计生、器械</a></span></li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">购物卡、票卡</a></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="nav">
+      <ul>
+        <li><a href="#">进口好货</a></li>
+        <li><a href="#">母婴馆</a></li>
+        <li><a href="#">美食城</a></li>
+        <li><a href="#">美护馆</a></li>
+        <li><a href="#">飞牛团</a></li>
+        <li><a href="#">自创品牌</a><i></i></li>
+      </ul>
+    </div>
+    <img src="../images/b.gif"> </div>
+</div>
+<div class="crumbs ">
+  <ul class="wrap">
+    <li><a  style="font-size:17px; color:rgba(0,0,0,1); font-weight:500;" href="#">美妆洗护、个人护理 </a></li>
+    <li><a href="#"> > 美发护发</a></li>
+    <li><a href="#"> 洗发水 ></a></li>
+    <li><a href="#"> 海飞丝洗发水 ></a></li>
+    <li style=" font-size:13px;color:#D7063B;">海飞丝男士去屑洗发露劲感净透190ml/...</li>
+  </ul>
+</div>
+<div class="details_wrap wrap ">
+  <div class="details_left"> 
+    <!-- 商品展示 -->
+    <div class="shop_goods_show">
+      <div class="shop_goods_show_left "> 
+        <!-- 京东商品展示 -->
+        <div id="preview">
+          <div class=jqzoom id="spec-n1" onClick="window.open('/')"><IMG height="398" src="../images/hfs3.jpg" jqimg="../images/hfs3.jpg" width="398"> </div>
+          <div id="spec-n5">
+            <div class=control id="spec-left"> <img src="../images/left.gif" /> </div>
+            <div id="spec-list">
+              <ul class="list-h">
+                <li><img src="../images/hfs1.jpg"> </li>
+                <li><img src="../images/hfs2.jpg"> </li>
+                <li><img src="../images/hfs3.jpg"> </li>
+                <li><img src="../images/hfs4.jpg"> </li>
+                <li><img src="../images/hfs1.jpg"> </li>
+                <li><img src="../images/hfs2.jpg"> </li>
+                <li><img src="../images/hfs3.jpg"> </li>
+                <li><img src="../images/hfs4.jpg"> </li>
+              </ul>
+            </div>
+            <div class=control id="spec-right"> <img src="../images/right.gif" /> </div>
+          </div>
+          <div class="sc " style=" margin-left:-300px; margin-bottom:50px;"><a href="#"><i class="fa fa-star-o" style="color:rgba(255,153,0,1);"aria-hidden="true"></i> 收藏商品</a></div>
+        </div>
+        <SCRIPT type=text/javascript>
+						$(function(){			
+						   $(".jqzoom").jqueryzoom({
+								xzoom:400,
+								yzoom:400,
+								offset:10,
+								position:"right",
+								preload:1,
+								lens:1
+							});
+							$("#spec-list").jdMarquee({
+								deriction:"left",
+								width:398,
+								height:56,
+								step:2,
+								speed:4,
+								delay:10,
+								control:true,
+								_front:"#spec-right",
+								_back:"#spec-left"
+							});
+							$("#spec-list img").bind("mouseover",function(){
+								var src=$(this).attr("src");
+								$("#spec-n1 img").eq(0).attr({
+									src:src.replace("\/n5\/","\/n1\/"),
+									jqimg:src.replace("\/n5\/","\/n0\/")
+								});
+								$(this).css({
+									"border":"1px solid #ff6600",
+									"padding":"1px"
+								});
+							}).bind("mouseout",function(){
+								$(this).css({
+									"border":"1px solid #ccc",
+									"padding":"2px"
+								});
+							});				
+						})
+						</SCRIPT> 
+        <!-- 京东商品展示 End --> 
+        
+      </div>
+    </div>
+    <!-- 商品展示 End --> 
+  </div>
+  <div class="details_infor">
+    <div class="details_infor_top">
+      <p>海飞丝男士去屑洗发露劲感净透190ml/瓶</p>
+    </div>
+    <div class="details_infor_centent clearfix">
+      <ul>
+        <li class="b">
+          <p>送积分 13 <a href="#"> 详</a></p>
+        </li>
+        <li class="c">
+          <p><i style="font-size:12px; color:#9C9C9C;"> 飞 牛 价</i><i style="font-size:20px; color:#D7063B; font-weight:700;"><small>￥</small>27.9</i><i><a style=" font-size:12px;color:#0066CC;" href="#">（降价通知）</a></i></p>
+        </li>
+        <li class="d">
+          <p class="dd">促销信息&nbsp;&nbsp;&nbsp;<i>领劵</i>&nbsp; <em style="font-style:normal; color:rgba(0,0,0,1);">先领劵再下单 （查看更多领取优惠券）</em></p>
+          <p class="ddd">共<i style="color:rgba(255,51,51,1);">2</i>项 <a style="color:rgba(0,102,255,1);" href="#">查看更多</a></p>
+        </li>
+        <li class="e"><i>数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量</i><span class="gw_num"><em class="jian">-</em>
+          <input type="text" value="1" class="num"/>
+          <em class="add">+</em></span></li>
+        <li class="f">
+          <button><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;&nbsp; 加入购物车</i></button>
+        </li>
+        <li class="g"><span>送货至</span>
+          <select name="select" style=" padding:3px 0; width:120px;margin-top:10px; margin-left:20px;">
+            <option value="北京">北京</option>
+            <option value="上海">上海</option>
+            <option value="郑州">郑州</option>
+            <option value="广州">广州</option>
+            <option value="济南" selected>济南</option>
+          </select>
+          <p>温馨提示  1.本商品不可用抵用券，购物金，优惠券</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="details_right_a" >
+    <ul>
+      <li class="left">
+        <p style="float:left; color:rgba(0,0,0,1);">看了又看</p>
+        <p style="float:right; color:#9C9C9C;"><i class="fa fa-refresh" aria-hidden="true"></i>换一批</p>
+      </li>
+      <li><a href="#"><img src="../images/ca.jpg"></a>
+        <p><a href="#">海飞丝 去屑洗发露清爽去油型</a></p>
+        <p style="color:rgba(204,0,0,1); font-size:11px;">￥86.9</p>
+      </li>
+      <li><a href="#"><img src="../images/ca.jpg"></a>
+        <p><a href="#">海飞丝 去屑洗发露清爽去油型</a></p>
+        <p style="color:rgba(204,0,0,1); font-size:11px;">￥86.9</p>
+      </li>
+      <li><a href="#"><img src="../images/ca.jpg"></a>
+        <p><a href="#">海飞丝 去屑洗发露清爽去油型</a></p>
+        <p style="color:rgba(204,0,0,1); font-size:11px;">￥86.9</p>
+      </li>
+    </ul>
+  </div>
+</div>
+<script type="text/javascript" src="../jquery.min.js" ></script> 
+<script type="text/javascript">
+		$(document).ready(function(){
+			//加的效果
+			$(".add").click(function(){
+			var n=$(this).prev().val();
+			var num=parseInt(n)+1;
+			if(num==0){ return;}
+			$(this).prev().val(num);
+			});
+			//减的效果
+			$(".jian").click(function(){
+			var n=$(this).next().val();
+			var num=parseInt(n)-1;
+			if(num==0){ return}
+			$(this).next().val(num);
+			});
+		})
+	</script>
+<div class="detail_center_left wrap">
+  <div class="detail_con_left">
+    <ul class="daa">
+      <li class="da">
+        <p>相关分类</p>
+      </li>
+      <li class="db">
+        <p><a href="#">假发/假发配件</a></p>
+        <p><a href="#">洗护套装</a></p>
+        <p><a href="#">定型造型</a></p>
+        <p><a href="#">染发</a></p>
+      </li>
+    </ul>
+    <ul class="dbb">
+      <li class="da">
+        <p class="xf">海飞丝洗发水排行榜</p>
+        <div class="slideTxtBox">
+          <div class="hd">
+            <ul>
+              <li>
+                <p>同价格</p>
+              </li>
+              <li>
+                <p>同品牌</p>
+              </li>
+              <li>
+                <p>同类别</p>
+              </li>
+            </ul>
+          </div>
+          <div class="bd">
+            <ul>
+              <li class="bda">
+                <p>品牌推荐</p>
+              </li>
+              <li class="bdb">
+                <p><a href="#">艾诗</a></p>
+                <p><a href="#">COCOVEL</a></p>
+                <p><a href="#">LG</a></p>
+                <p><a href="#">BOSSDUN.MEN</a></p>
+                <p><a href="#">100年润发</a></p>
+                <p><a href="#">追风</a></p>
+                <p><a href="#">施华蔻(SCHWARZZ)</a></p>
+                <p><a href="#">索薇娅(SOVYA)</a></p>
+                <p><a href="#">好迪</a></p>
+                <p><a href="#">欧莱雅(L'OREAL)</a></p>
+              </li>
+              <li class="bdc">
+                <p>品牌推荐</p>
+              </li>
+              <li class="bdd">
+                <p><a href="#">海飞丝洗发水</a></p>
+            </ul>
+            <ul>
+              <li class="bde">
+                <p class="bdea"><a href="#"><img style="width:60px; height:60px;" src="../images/qx.jpg"></a></p>
+                <p class="bdeb"><a href="#">海飞丝男士去屑洗发露劲感去油型730毫</a><span><small>￥</small>86.9</span></p>
+              </li>
+              <li class="bde">
+                <p class="bdea"><a href="#"><img style="width:60px; height:60px;" src="../images/qx.jpg"></a></p>
+                <p class="bdeb"><a href="#">海飞丝男士去屑洗发露劲感去油型730毫</a><span><small>￥</small>86.9</span></p>
+              </li>
+              <li class="bde">
+                <p class="bdea"><a href="#"><img style="width:60px; height:60px;" src="../images/qx.jpg"></a></p>
+                <p class="bdeb"><a href="#">海飞丝男士去屑洗发露劲感去油型730毫</a><span><small>￥</small>86.9</span></p>
+              </li>
+              <li class="bde">
+                <p class="bdea"><a href="#"><img style="width:60px; height:60px;" src="../images/qx.jpg"></a></p>
+                <p class="bdeb"><a href="#">海飞丝男士去屑洗发露劲感去油型730毫</a><span><small>￥</small>86.9</span></p>
+              </li>
+              <li class="bde">
+                <p class="bdea"><a href="#"><img style="width:60px; height:60px;" src="../images/qx.jpg"></a></p>
+                <p class="bdeb"><a href="#">海飞丝男士去屑洗发露劲感去油型730毫</a><span><small>￥</small>86.9</span></p>
+              </li>
+              <li class="bde">
+                <p class="bdea"><a href="#"><img style="width:60px; height:60px;" src="../images/qx.jpg"></a></p>
+                <p class="bdeb"><a href="#">海飞丝男士去屑洗发露劲感去油型730毫</a><span><small>￥</small>86.9</span></p>
+              </li>
+              <li class="bde">
+                <p class="bdea"><a href="#"><img style="width:60px; height:60px;" src="../images/qx.jpg"></a></p>
+                <p class="bdeb"><a href="#">海飞丝男士去屑洗发露劲感去油型730毫</a><span><small>￥</small>86.9</span></p>
+              </li>
+              <li class="bda">
+                <p>品牌推荐</p>
+              </li>
+              <li class="bdb">
+                <p><a href="#">艾诗</a></p>
+                <p><a href="#">COCOVEL</a></p>
+                <p><a href="#">LG</a></p>
+                <p><a href="#">BOSSDUN.MEN</a></p>
+                <p><a href="#">100年润发</a></p>
+                <p><a href="#">追风</a></p>
+                <p><a href="#">施华蔻(SCHWARZZ)</a></p>
+                <p><a href="#">索薇娅(SOVYA)</a></p>
+                <p><a href="#">好迪</a></p>
+                <p><a href="#">欧莱雅(L'OREAL)</a></p>
+              </li>
+              <li class="bdc">
+                <p>品牌推荐</p>
+              </li>
+              <li class="bdd">
+                <p><a href="#">海飞丝洗发水</a></p>
+            </ul>
+            <ul>
+              <li class="bde">
+                <p class="bdea"><a href="#"><img style="width:60px; height:60px;" src="../images/pr.jpg"></a></p>
+                <p class="bdeb"><a href="#">海飞丝男士去屑洗发露劲感去油型730毫</a><span><small>￥</small>86.9</span></p>
+              </li>
+              <li class="bde">
+                <p class="bdea"><a href="#"><img style="width:60px; height:60px;" src="../images/qx.jpg"></a></p>
+                <p class="bdeb"><a href="#">海飞丝男士去屑洗发露劲感去油型730毫</a><span><small>￥</small>86.9</span></p>
+              </li>
+              <li class="bde">
+                <p class="bdea"><a href="#"><img style="width:60px; height:60px;" src="../images/pr.jpg"></a></p>
+                <p class="bdeb"><a href="#">海飞丝男士去屑洗发露劲感去油型730毫</a><span><small>￥</small>86.9</span></p>
+              </li>
+              <li class="bde">
+                <p class="bdea"><a href="#"><img style="width:60px; height:60px;" src="../images/qx.jpg"></a></p>
+                <p class="bdeb"><a href="#">海飞丝男士去屑洗发露劲感去油型730毫</a><span><small>￥</small>86.9</span></p>
+              </li>
+              <li class="bde">
+                <p class="bdea"><a href="#"><img style="width:60px; height:60px;" src="../images/pr.jpg"></a></p>
+                <p class="bdeb"><a href="#">海飞丝男士去屑洗发露劲感去油型730毫</a><span><small>￥</small>86.9</span></p>
+              </li>
+              <li class="bde">
+                <p class="bdea"><a href="#"><img style="width:60px; height:60px;" src="../images/qx.jpg"></a></p>
+                <p class="bdeb"><a href="#">海飞丝男士去屑洗发露劲感去油型730毫</a><span><small>￥</small>86.9</span></p>
+              </li>
+              <li class="bde">
+                <p class="bdea"><a href="#"><img style="width:60px; height:60px;" src="../images/pr.jpg"></a></p>
+                <p class="bdeb"><a href="#">海飞丝男士去屑洗发露劲感去油型730毫</a><span><small>￥</small>86.9</span></p>
+              </li>
+              <li class="bda">
+                <p>品牌推荐</p>
+              </li>
+              <li class="bdb">
+                <p><a href="#">艾诗</a></p>
+                <p><a href="#">COCOVEL</a></p>
+                <p><a href="#">LG</a></p>
+                <p><a href="#">BOSSDUN.MEN</a></p>
+                <p><a href="#">100年润发</a></p>
+                <p><a href="#">追风</a></p>
+                <p><a href="#">施华蔻(SCHWARZZ)</a></p>
+                <p><a href="#">索薇娅(SOVYA)</a></p>
+                <p><a href="#">好迪</a></p>
+                <p><a href="#">欧莱雅(L'OREAL)</a></p>
+              </li>
+              <li class="bdc">
+                <p>品牌推荐</p>
+              </li>
+              <li class="bdd">
+                <p><a href="#">海飞丝洗发水</a></p>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="detail_con_right">
+    <div class="slideTxtBox">
+      <div class="hd">
+        <ul>
+          <li class="la">
+            <p>商品介绍</p>
+          </li>
+          <li class="la">
+            <p>规格及包装</p>
+          </li>
+          <li class="la">
+            <p>评价(1)</p>
+          </li>
+          <li class="la">
+            <p>售后服务</p>
+          </li>
+        </ul>
+      </div>
+      <div class="aaaa clearfix">
+        <div class="bd">
+          <ul>
+            <li class="sa">商品名称：海飞丝男士去屑洗发露劲感净透190ml/瓶</li>
+            <li class="sb">
+              <p>品牌：<span style="color:rgba(0,51,255,1);">海飞丝</span></p>
+              <p>适用发质：油性　混合性</p>
+              <p>美发功效：控油平衡　去屑止痒　头皮护理</p>
+              <p>适用人群：男士专用</p>
+              <p>原产区：欧美品牌</p>
+              <p>国产/进口：国产</p>
+            </li>
+            <li class="sc">
+              <p><a href="#">更多参数>></a></p>
+            </li>
+            <li class="s"><img src="../images/ns.jpg"></li>
+            <li class="s"><img src="../images/ns1.jpg"></li>
+            <li class="s"><img src="../images/ns3.jpg"></li>
+            <li class="s"><img src="../images/ns2.jpg"></li>
+            <li class="s"><img src="../images/ns4.jpg"></li>
+            <li class="s"><img src="../images/ns5.jpg"></li>
+            <li class="s"><img src="../images/ns6.jpg"></li>
+            <li class="s"><img src="../images/ns7.jpg"></li>
+            <li class="s"><img src="../images/ns8.jpg"></li>
+          </ul>
+          <ul class="z">
+            <table width="958" border="1" bordercolor="#F1F1F1">
+              <caption  style="float:left; height:33px; font-weight:600; line-height:33px;">
+              <p>主体</p>
+              </caption>
+              <tr>
+                <td><p>品牌:</p></td>
+                <td><p style="color:rgba(51,51,255,1);">海飞丝</p></td>
+              </tr>
+              <tr>
+                <td><p>适用发质:</p></td>
+                <td><p>油性　混合性</p></td>
+              </tr>
+              <tr>
+                <td><p>美发功效:</p></td>
+                <td><p>控油平衡　去屑止痒　头皮护理</p></td>
+              </tr>
+              <tr>
+                <td><p>适用人群：</p></td>
+                <td><p>男士专用</p></td>
+              </tr>
+              <tr>
+                <td><p>原产区:</p></td>
+                <td><p>欧美品牌</p></td>
+              </tr>
+              <tr>
+                <td><p>国产/进口:</p></td>
+                <td><p>国产</p></td>
+              </tr>
+            </table>
+          </ul>
+          <ul>
+          </ul>
+          <ul class="o">
+            <li>
+              <p class="oo"> 寄送与联络信息</p>
+              <p>配送范围： 北京市、上海市、天津市、江苏省、浙江省、安徽省、广东省、广西省、福建省、山东省、山西省、海南省、辽宁省、河北省、云南省、湖北省、河南省、贵州省、黑龙江省、湖南省、吉林省、新疆省、内蒙古(西)(部份商品可能因配送限制不能送达)</p>
+              <p>配送方式：飞牛自配送或委托第三方快递公司为客户提供送货上门服务</p>
+              <p>权利声明：飞牛网上的所有商品信息，未经许可，禁止非法转载使用</p>
+              <p>配送运费：全网满95元，重量≤10kg免运费，详细请参阅</p>
+              <p>运费说明</p>
+              <p>注：部份厂商自行发货商品退货/退款流程请参阅商品详情说明方式进行或联系客服处理。</p>
+              <p class="oo">退货说明</p>
+              <p>飞牛网所订购的商品(商品主页已说明不支持7天无理由退货者除外)，自您签收商品隔日起算七日内，如需退货请直接至「我的帐户」、「查订单」、「退货」申请，在您提交退货申请后，我们将于1个工作天内进行审核，审核通过将会有E-mail通知您，并于2-3个工作天内安排物流人员前往取回商品，退回商品的物流费用由飞牛网支付，同时商品必须保持全新状态且完整包装（包含：主商品、附件、包装、外盒、赠品、保修凭证、单据...等)</p>
+              <p>以下状况飞牛网将不接受您的退货</p>
+              <p>1.商品非飞牛网所贩售出之商品，如：商品序号不符</p>
+              <p>2.未经授权的维修、误用、碰撞、疏忽、滥用、进液、事故、改动、不正确的安装所造成的商品质量问题，或撕毁、涂改标贴、机器序号、防伪标记</p>
+              <p>3.若有索取发票未随货退回、或发票有经涂改、破损影响识别之状况</p>
+              <p>4.食品类、保健品、烟酒类、化妆品、个人卫生用品、耗材、电池、胶卷、虚拟商品、软件类...等商品已有拆封状况；服饰、配件类已进行修改</p>
+              <p>5.商品说明书、保修卡涂改、污损、缺少未退回</p>
+              <p>6.商品包装破损，配件、附件不齐全、污损等</p>
+              <p>7.其他依法律/规不受理退货者，如:知识产权保护商品</p>
+              <p class="oo">温馨提示</p>
+              <p>由于部分商品包装更换较为频繁，因此您收到的货品有可能与展示图片不完全一致，请您以收到的商品实物为准，同时我们会尽量做到及时更新，由此给您带来不便多多谅解，谢谢！</p>
+              <p class="oo">退款说明</p>
+              <p>1.若您购买的家电商品已经拆封过，需要退换货，需请联系原厂开具鉴定检测单</p>
+              <p>2.签收商品隔日起七日内提交退货申请，2-3天快递员与您联系安排取回商品</p>
+              <p>3.商品退回检验，且必须附上检测单</p>
+              <p>4.通过线上支付的订单办理退货，商品退回检验无误后，飞牛网将提交退款申请, 实际款项会依照各银行作业时间返还至您原支付方式 若您采用货到付款，请于办理退货时提供退款账户，亦于商品退回检验无误后，将退款汇至您的银行账户中</p>
+              <p>5.若退回商品有缺件、影响二次销售状况时，退款作业将暂时停止，飞牛网会依商品状况报价，后由客服人员与您联系说明并于订单内扣除费用后退回剩余款项，或您可以取消退货申请；若符合退货条件者将于商品取回后约1-2个工作日内完成退款</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script type="text/javascript">jQuery(".slideTxtBox").slide({trigger:"click"});</script> 
+<script type="text/javascript">
+//百度统计代码
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fa630f96b6a9dd549675d26373853f7f1' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div class="footer mt20" tp-area="1009" style=" border:none; padding-top:50px;">
+  <div class="footer-map ma oh" >
+    <ul class="fixed">
+      <li class="map"> <img class="footer-icon" src="../images/1.png"> <strong class="tit">正品低价</strong> <br>
+        <span class="desc">正品行货 品质保障</span> </li>
+      <li class="line"></li>
+      <li class="map"> <img class="footer-icon" src="../images/2.png"> <strong class="tit">品类齐全</strong> <br>
+        <span class="desc">品类齐全 选择丰富</span> </li>
+      <li class="line"></li>
+      <li class="map"> <img class="footer-icon" src="../images/3.png"> <strong class="tit">快速配送</strong> <br>
+        <span class="desc">多仓直发 极速配送</span> </li>
+      <li class="line"></li>
+      <li class="map"> <img class="footer-icon" src="../images/4.png"> <strong class="tit">售后无忧</strong> <br>
+        <span class="desc">7天无理由退货</span> </li>
+    </ul>
+  </div>
+  <div class="site-info" tp-childarea="botinfo">
+    <div class="foot-nav"> <a rel="nofollow" href="#" target="_blank">公司介绍</a>| <a rel="nofollow" href="#" target="_blank">联系我们</a>| <a rel="nofollow" href="#" target="_blank">飞牛招聘</a>| <a rel="nofollow" href="#" target="_blank">媒体报道</a>| <a href="#" target="_blank">热搜索词</a>| <a href="#" target="_blank">评价中心</a>| <a href="#" target="_blank">友情链接</a>| <a rel="nofollow" href="#" target="_blank">商家入驻</a>| <a rel="nofollow" href="#" target="_blank">招商标准</a>| <a rel="nofollow" href="#" target="_blank">开放平台</a>| <a rel="nofollow" href="#" style="cursor:default;text-decoration:none;">企业团购 021-36695538</a>| <a rel="nofollow" href="#" style="cursor:default;text-decoration:none;">客服热线 400-920-6565</a> </div>
+    <div class="link">
+      <p> <a href="#" target="_blank" style="color: #666;">沪公网安备 31010802001821号</a>　|　<a href="#" target="_blank" style="color: #666;">沪ICP备14034590号</a>　|　<a href="#" target="_blank" style="color: #666;">食品经营许可证 JY13101060025900</a>　|　<a href="#" target="_blank" style="color: #666;">酒类商品零售许可证 沪静酒专字 第0818030108000002号</a> </p>
+      <p> 出版物经营许可证编号新出发（沪）零字第Z6216号　|　快递业务经营许可证编号：沪邮20131324B　|　<a href="http://img18.fn-mart.com/pic/4e21133d4c1adc27a686/knqnTT5nFzCghdZdjT/79eGmGJaFG0aZx/CsmRslj0F8KAKz_iAAud2ZblLQI424.png" target="_blank" style="color: #666;"> 营业执照</a> </p>
+      <p> Copyright © 2013-2016 飞牛网, All Rights Reserved. </p>
+    </div>
+    <div class="inline-box logowall"> <a href="#" class="item" target="_blank" rel="nofollow"> <img src="../images/5.png"> </a> <a href="#"> <img src="../images/11.jpg"> </a> <a href="#" class="item" target="_blank" rel="nofollow"> <img src="../images/15.jpg"> </a> <a href="#" class="item" target="_blank" rel="nofollow"> <img src="../images/12.jpg"> </a> <a href="#" class="item" target="_blank" rel="nofollow"> <img src="../images/13.jpg"> </a> <a href="#" class="item" target="_blank" rel="nofollow"> <img src="../images/14.jpg"> </a> <a href="#" class="item" target="_blank" rel="nofollow"> <img src="../images/6.png"> </a> </div>
+  </div>
+</div>
+</body>
+</html>

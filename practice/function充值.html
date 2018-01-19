@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script></head>
+<style type="text/css">
+.function{ width:200px; height:435px; background:#ecf5f0; box-sizing:border-box;}
+.function .function_a { width:100%; height:90px; padding-left:10px; padding-top:12px; border-bottom:1px dashed #d1dad5;}
+.function .function_a img{ margin-right:12px;}
+.function .function_a p{ font-size:12px; color:#606964;}
+.function .function_a div{ float:left;}
+.function .function_b{ width:100%; height:60px; padding:5px 12px;}
+.function .function_b a{ font-size:12px; color:#606964;}
+
+
+		/* 本例子css */
+.function .slideTxtBox{ width:200px;height:175px; border:1px solid #ddd; margin:0 auto;   }
+.function .slideTxtBox .hd{ height:30px; line-height:30px; background:#f4f4f4;    border-bottom:1px solid #ddd;  position:relative; }
+.function .slideTxtBox .hd ul{ float:left;  position:absolute;   height:35px;   }
+.function .slideTxtBox .hd ul li{ float:left;  cursor:pointer;   }
+.function .slideTxtBox .hd ul li p{width:99px; height:27px; float:left; background:#FFF; display:block;  border-right:1px solid #d1dad5; border-bottom:0 none; font-size:14px; padding-left:18px;}
+.function .slideTxtBox .hd ul li.on{ height:30px;  background:#fff;  border-top:2px solid #cc0e3c; border-bottom:2px solid #fff; }
+
+
+</style>
+</head>
+
+<body>
+<div class="function">
+ <div class="function_a">
+        <div class="tp line"><a href="#"><img src="images/a.png"><p>在线客服</p></a></div>
+        <div class="tp buy"><a href="#"><img src="images/b.png"><p>曾经购买</p></a></div>
+        <div class="tp collect"><a href="#"><img src="images/c.png"><p>我的收藏</p></a></div>
+ </div>
+ <div class="function_b"><a href="#">【活动】浙商信用卡满50减49</a></div>
+ 
+ 
+<div class="slideTxtBox">
+			<div class="hd">
+
+
+				<ul><li><p>话费充值</p></li><li><p>流量充值</p></li></ul>
+			</div>
+			<div class="bd">
+				<ul>
+<form style="padding-left:10px; border-top:1px solid #d1dad5; margin-top:-1px; ">
+     <input type="tel" style="padding:3px 0; width:180px; margin-top:10px;" placeholder="请输入手机号"/>
+     <select name="select" style=" padding:3px 0; width:180px;margin-top:10px;">
+                   <option value="10">10</option>
+                   <option value="20">20</option>
+                   <option value="30">30</option>
+                   <option value="40">40</option>
+                   <option value="50" selected>50</option>
+                   <option value="100">100</option>
+                   <option value="200">200</option>
+                   <option value="300">300</option>
+                   <option value="400">400</option>
+</select>
+<p style="font-size:12px; margin-top:5px;">售价<span style="color:#cc0e3c;">￥49.9元-49.95元</span></p>
+<input type="submit" value="立即充值" style="width:80px; height:28px; background:#cc0e3c; color:#fff; margin-top:25px;">
+     </form>				</ul>
+				<ul>
+<form style="padding-left:10px; border-top:1px solid #d1dad5; margin-top:-1px; ">
+     <input type="tel" style="padding:3px 0; width:180px; margin-top:10px;" placeholder="请输入手机号"/>
+     <select name="select" style=" padding:3px 0; width:180px;margin-top:10px;">
+                   <option value="10">10</option>
+                   <option value="20">20</option>
+                   <option value="30">30</option>
+                   <option value="40">40</option>
+                   <option value="50" selected>50</option>
+                   <option value="100">100</option>
+                   <option value="200">200</option>
+                   <option value="300">300</option>
+                   <option value="400">400</option>
+</select>
+<p style="font-size:12px; margin-top:5px;">售价<span style="color:#cc0e3c;">￥49.9元-49.95元</span></p>
+<input type="submit" class="lj" value="立即充值" style="width:80px; height:28px; background:#cc0e3c; color:#fff; margin-top:25px;">
+     </form>				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">jQuery(".slideTxtBox").slide();</script>
+ <div class="function_d"><img src="images/haifeisi.jpg"></div>
+</div>
+
+</body>
+</html>

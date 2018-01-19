@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>登录飞牛网</title>
+<link  rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="../css/base.css">
+<link rel="stylesheet" type="text/css" href="../css/register.css">
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery.SuperSlide.2.1.1.js"></script>
+<!--<style type="text/css">
+.register { width: 100%; height: 80px; }
+.register .register_top { width: 1060px; height: 100%; margin: 0 auto; }
+.register .register_top img { margin: 10px 0; }
+.register_centre { width: 100%; height: 494px; background: #E9E9E9; position:relative;}
+.register_centre .register_banner { height: 100%; }
+.register_centre .register_banner img { margin: 40px 0; }
+.register_centre .register_banner .register_right { width: 345px; height: 385px; background: #FFF; float: right; position: absolute;; top: 40px; right: 495px; }
+.register_centre .register_banner .register_right .register_center { width: 305px; height: 365px; margin: 20px 20px 0; }
+.register_centre .register_banner .register_right .register_center h1 { color: #666666; font-size: 16px; font-weight: 300; }
+.register_centre .register_banner .register_right .safe { font-size: 12px; color: #666666; width: 106px; height: 18px; padding: 0 10px; display: block; border: 1px solid #FFD8A4; position: absolute; left: 180px; top: 10px; ; }
+.register_centre .register_banner .register_right h1 { display: block; margin-top: 20px; }
+.register_centre .register_banner form { margin-top: 47px; width: 305px; height: 194px; }
+.register_centre .register_banner form a:hover { text-decoration: underline; }
+.register_centre .register_banner .register_right .rigister_bottom { font-size: 13px; width: 345px; height: 40px; padding: 10px 20px; margin-left: -20px; background: #F5F5F5; margin-top: 24px; }
+.register_centre .register_banner .register_right .rigister_bottom .sj_yzm { float: left; }
+.register_centre .register_banner .register_right .rigister_bottom .sj_yzm a { color: #666666; }
+.register_centre .register_banner .register_right .rigister_bottom .zc { float: right; }
+.register_centre .register_banner .register_right .rigister_bottom .zc a { color: #D7063B; }
+.register_centre .register_banner .register_right .rigister_bottom .zc a span { margin-right: 5px; border: 1px solid #D7063B; display: inline-block; line-height: 15px; text-align: center; width: 16px; height: 16px; border-radius: 50%; }
+.register_centre .register_banner .register_right .partners { margin-left: -20px; width: 345px; height: 40px; padding: 10px 20px; background: #EEEEEE; }
+.register_centre .register_banner .register_right .partners p { color: #666666; font-size: 12px; }
+.register_centre .register_banner .register_right .partners .qq { display: block; width: 20px; height: 20px; background: url(../images/qq.png) no-repeat 0 0; float: left; margin: 0 10px; }
+.register_centre .register_banner .register_right .partners .qq:hover { display: block; width: 20px; height: 20px; background: url(../images/qq.png) no-repeat -20px 0; }
+.register_centre .register_banner .register_right .partners .wx { display: block; width: 20px; height: 20px; background: url(../images/qq.png) no-repeat 0 -20px; float: left; }
+.register_centre .register_banner .register_right .partners .wx:hover { display: block; width: 20px; height: 20px; background: url(../images/qq.png) no-repeat -20px -20px; }
+.register_centre .register_banner .register_right .qh{ position:absolute; left:284px; top:-40px;}
+.register_centre .register_banner #gua:target{ display: none; }
+.register_centre .register_banner #gu:target{ display: none; }
+</style>
+--></head>
+
+<body>
+<div class="register">
+  <div class="register_top"> <img src="../images/fnw.png"> </div>
+</div>
+<div class="register_centre">
+  <div class="register_banner  wrap"> <img class="jd" src="../images/register.jpg">
+    <div class="register_right" id="gua">
+      <div class="qh"><a href="#gua"><img src="../images/login-qr.png"></a></div>
+      <div class="register_center">
+        <p class="safe">扫码登录更安全</p>
+        <h1>登录飞牛网</h1>
+        <form >
+          <i class="fa fa-user" style=" display:block; position:absolute; font-size:20px;width:42px; height:38px; padding:10px; color:#E7E7E7;  "></i>
+          <input type="text" style=" width:305px;height:40px;border: 1px solid #ccc;padding: 10px 10px 10px 47px;font-size: 14px;" placeholder="邮箱/用户名/手机号" name="username" >
+          <input type="hidden">
+          <i class="fa fa-key" aria-hidden="true" style=" display:block; position:absolute; font-size:20px;width:42px; height:38px; padding:10px; color:#E7E7E7;  margin-top:20px;  "></i>
+          <input type="password" placeholder="密码" name="password" style=" margin-top:20px; width:305px;height: 40px;border: 1px solid #ccc;padding: 10px 10px 10px 47px;font-size: 14px;">
+          <input type="checkbox" name="chkRememberMe" style="margin-top:15px; float:left;" >
+          <span style="font-size:12px; color:#666666; display:block; float:left; margin-top:13px; margin-left:5px; "> 自动登录</span> <a href="#" style="float:right; margin-top:15px; color:#666666; font-size:12px;">忘记密码？</a>
+          <input type="submit" name="登录" value="登 录" style=" width:305px; height:40px; background:#E60740; color:rgba(255,255,255,1); font-size:22px; margin-top:20px;">
+        </form>
+        <div class="rigister_bottom">
+          <p class="sj_yzm"><a href="#">手机验证码登录</a></p>
+          <p class="zc"><a href="#"><span>></span>免费注册</a></p>
+        </div>
+        <div class="partners">
+          <p><span style="float:left;">合作网站登录:</span> <a href="#"><i class="qq"></i></a><a href="#"><i class="wx"></i></a></p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="register_right" id="gu">
+      <div class="qh"><a href="#gu"><img src="../images/login-pc.png"></a></div>
+      <div class="register_center" style="text-align:center;">
+        <p style="font-size:14px; font-weight:700; margin-top:50px; margin-bottom:-20px;">用飞牛网APP，扫一扫安全登录</p>
+        <img src="../images/qrCodeImg ">
+        <p style="font-size:12px;">打开新版 <a href="#" style="color:#1766CF;">飞牛APP</a> 扫描二维码</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script language="javascript" type="text/javascript">
+  function display(){
+	  var div1 = document.getElementById("div1");
+	  if(div1.style.display=="none"){
+		  div1.style.display = "block";
+		  div2.style.display = "none";
+	  }else{
+		  div1.style.display = "none";
+		  div2.style.display = "block";
+	  }
+  }
+  </script>
+<div class="site-info" tp-childarea="botinfo">
+  <div class="foot-nav"> <a rel="nofollow" href="#" target="_blank">公司介绍</a>| <a rel="nofollow" href="#" target="_blank">联系我们</a>| <a rel="nofollow" href="#" target="_blank">飞牛招聘</a>| <a rel="nofollow" href="#" target="_blank">媒体报道</a>| <a href="#" target="_blank">热搜索词</a>| <a href="#" target="_blank">评价中心</a>| <a href="#" target="_blank">友情链接</a>| <a rel="nofollow" href="#" target="_blank">商家入驻</a>| <a rel="nofollow" href="#" target="_blank">招商标准</a>| <a rel="nofollow" href="#" target="_blank">开放平台</a>| <a rel="nofollow" href="#" style="cursor:default;text-decoration:none;">企业团购 021-36695538</a>| <a rel="nofollow" href="#" style="cursor:default;text-decoration:none;">客服热线 400-920-6565</a> </div>
+  <div class="link">
+    <p> <a href="#" target="_blank" style="color: #666;">沪公网安备 31010802001821号</a>　|　<a href="#" target="_blank" style="color: #666;">沪ICP备14034590号</a>　|　<a href="#" target="_blank" style="color: #666;">食品经营许可证 JY13101060025900</a>　|　<a href="#" target="_blank" style="color: #666;">酒类商品零售许可证 沪静酒专字 第0818030108000002号</a> </p>
+    <p> 出版物经营许可证编号新出发（沪）零字第Z6216号　|　快递业务经营许可证编号：沪邮20131324B　|　<a href="http://img18.fn-mart.com/pic/4e21133d4c1adc27a686/knqnTT5nFzCghdZdjT/79eGmGJaFG0aZx/CsmRslj0F8KAKz_iAAud2ZblLQI424.png" target="_blank" style="color: #666;"> 营业执照</a> </p>
+    <p> Copyright © 2013-2016 飞牛网, All Rights Reserved. </p>
+  </div>
+  <div class="inline-box logowall"> <a href="#" class="item" target="_blank" rel="nofollow"> <img src="../images/5.png"> </a> <a href="#"> <img src="../images/11.jpg"> </a> <a href="#" class="item" target="_blank" rel="nofollow"> <img src="../images/15.jpg"> </a> <a href="#" class="item" target="_blank" rel="nofollow"> <img src="../images/12.jpg"> </a> <a href="#" class="item" target="_blank" rel="nofollow"> <img src="../images/13.jpg"> </a> <a href="#" class="item" target="_blank" rel="nofollow"> <img src="../images/14.jpg"> </a> <a href="#" class="item" target="_blank" rel="nofollow"> <img src="../images/6.png"> </a> </div>
+</div>
+</div>
+</body>
+</html>

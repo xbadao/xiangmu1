@@ -1,0 +1,263 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>购物车结算</title>
+<link  rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="../css/base.css">
+<link rel="stylesheet" type="text/css" href="../css/shopping.css">
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery.SuperSlide.2.1.1.js"></script>
+<!--<style type="text/css">
+a { text-decoration: none; font-size: 12px; color: #666666; }
+.top { width: 100%; height: 35px; background: #f7f7f7; border: 1px solid #dedede; position: fixed; top: 0; z-index: 1000; }
+.top .top_frame { width: 1190px; height: 100%; margin: 0 auto; line-height: 35px; }
+.top .top_frame a:hover { color: #d7063b; }
+.top .top_frame span { color: #dedede; }
+.top .top_frame i { padding-right: 4px; }
+.top .top_frame .top_enter { width: 136 px; height: 100%; float: left; padding: 0 5px; }
+.top .top_frame .top_enter p { float: left; font-size: 12px; padding: 0 3px; }
+.top .top_frame .top_entera { width: 101px; height: 100%; float: left; }
+.top .top_frame .right { float: right; line-height: 32px; }
+.top .top_frame .right ul li { float: left; padding: 0 5px; position: relative; }
+.top .top_frame .right ul li P { float: left; }
+.top .top_frame .right ul li p#fei { padding-left: 5px; border: 1px solid transparent; border-bottom: 0 none; position: relative; z-index: 10; }
+.top .top_frame .right ul li:hover p#fei { background: #FFF; border: 1px solid #dedede; border-bottom: 0 none; }
+.top .top_frame .right ul li:hover .my { display: block; }
+.top .top_frame .right ul li:hover p .zz { transform: rotate(180deg); transition: all 0.5s ease; padding-left: 5px; }
+.top .top_frame .right ul li p i { padding-left: 5px; transition: all 0.5s ease; }
+.top .top_frame .right ul li .my { background: #FFF; z-index: 9; display: none; float: left; width: 282px; height: 214px; box-sizing: border-box; border: 1px solid #dedede; border-top: 0 none; position: absolute; margin-top: 38px; }
+.top .top_frame .right ul li .my dl p a img { width: 80px; height: 80px; background-color: #efefef; border: 2px #d1d1d1 solid; -webkit-border-radius: 60px; margin: 16px 16px; }
+.top .top_frame .right ul li .my dl { width: 100%; height: 105px; }
+.top .top_frame .right ul li .my dl dd { width: 138px; height: 100%; float: left; margin-top: -22px; }
+.top .top_frame .right ul li .my dl p .log { float: right; margin-right: 74px; margin-top: 40px; color: #000; font-size: 15px; }
+.top .top_frame .right ul li .my dl dd a { display: block; margin-left: 15px; line-height: 25px; }
+.top .top_frame .right ul li .server { padding-left: 5px; background: #FFF; display: none; border: 1px solid #dedede; border-top: 0 none; width: 70px; height: 55px; box-sizing: border-box; position: absolute; margin-top: 38px; z-index: 9; }
+.top .top_frame .right ul li .server a { height: 24px; display: block; line-height: 20px; }
+.top .top_frame .right ul li:hover .server { display: block; }
+.top .top_frame .right ul li #f { border: 1px solid transparent; border-bottom: 0 none; position: relative; padding-left: 5px; }
+.top .top_frame .right ul li:hover #f { background: #FFF; border: 1px solid #dedede; border-bottom: 0 none; }
+.top .top_frame .t { float: right; width: 122px; height: 100%; padding: 0 2px; }
+.top .top_frame .t li { position: relative; float: left; padding: 0 2px; line-height: 32px; }
+.top .top_frame .t li span { display: block; width: 20px; height: 20px; background: url(../images/fn_g_header.png) no-repeat -87px -75px; margin-top: 8px; }
+.top .top_frame .t li i { display: block; width: 18px; height: 20px; background: url(../images/fn_g_header.png) no-repeat -109px -75px; margin-top: 8px; }
+.top .top_frame .t li .weixin { background: #FFF; position: relative; z-index: 9; display: none; width: 135px; height: 140px; margin-left: -110px; margin-top: 5px; }
+.top .top_frame .t li:hover .weixin { display: block; }
+.register { width: 100%; height: 80px; margin-top: 37px; }
+.register .register_top { width: 1190px; height: 100%; margin: 0 auto; }
+.register .register_top .plan_left { margin: 10px 0; }
+.register .register_top .plan { width: 630px; height: 62px; float: right; margin-top: 10px; }
+.register .register_top .plan .plan_top p { float: left; color: #666666; width: 210px; height: 32px; font-size: 14px; padding-top: 5px; }
+.register .register_top .plan .plan_bottom { margin-left: 25px; }
+.register_centre { width: 100%; background: #E9E9E9; position: relative; border: 1px solid transparent; }
+.register_centre .register_banner { height: 100%; }
+.register_centre .register_banner .shopping .shopping_top ul .a { width: 122px; height: 39px; border-bottom: 2px solid #DA063B; }
+.register_centre .register_banner .shopping .shopping_top ul .a p { color: #DA063B; padding: 10px 20px; }
+.register_centre .register_banner .shopping .shopping_top ul .men p { float: left; }
+.register_centre .register_banner .shopping .shopping_top ul .b { background: rgba(255,255,255,1); height: 47px; line-height: 47px; border: 1px solid #D9D9D9; }
+.register_centre .register_banner .shopping .shopping_top ul .b p { text-align: center; }
+.register_centre .register_banner .shopping .shopping_top ul .c { width: 189px; height: 24px; margin-top: 20px; margin-left: 15px; }
+.register_centre .register_banner .shopping .shopping_top ul .d { height: 110px; margin-top: 10px; background: rgba(255,255,255,1); border: 1px solid #D9D9D9; }
+.register_centre .register_banner .shopping .shopping_top ul .d p { height: 54px; text-align: center; font-size: 12px; margin-top: 10px; }
+.register_centre .register_banner .shopping .shopping_top ul .d:hover { background: #FFF8E1; }
+.register_centre .register_banner .shopping .shopping_top ul .e { height: 50px;  background:rgba(255,255,255,1); border: 1px solid #D9D9D9;}
+.register_centre .register_banner .shopping .shopping_top ul .e .ee{ float:right;}
+.register_centre .register_banner .shopping .shopping_top ul .e p { padding-top:5px; padding-bottom:5px; text-align:center; width: 100px; height: 48px; font-size:12px;}
+.register_centre .register_banner .shopping .shopping_top ul .f{ line-height:58px; height:59px; background:rgba(255,255,255,1);border: 1px solid #D9D9D9; border-top:0 none;}
+.register_centre .register_banner .shopping .shopping_top ul .f .f_left{ float:left;  height:40px;}
+.register_centre .register_banner .shopping .shopping_top ul .f .f_left p{ margin-left:10px; padding-right:20px;}
+.register_centre .register_banner .shopping .shopping_top ul .f .f_left p a{ color:rgba(0,102,204,1);}
+.register_centre .register_banner .shopping .shopping_top ul .f .f_right{ float:right;}
+.register_centre .register_banner .shopping .shopping_top ul .f .f_right p{ font-size:12px; padding-left:20px; margin-right:15px;}
+.register_centre .register_banner .shopping .shopping_top ul .f .f_right p span{ font-size:25px; color:#DA063B;}
+.register_centre .register_banner .shopping .shopping_top ul .f .f_right button{ background:#DA063B; width:120px; height:40px; border:none; font-size:20px; color:rgba(255,255,255,1);}
+.register_centre .register_banner .shopping .shopping_top ul .g { height: 43px; background:rgba(255,255,255,1); }
+.register_centre .register_banner .shopping .shopping_top ul .g p {width:104px; color: #DA063B; padding: 10px 20px; border-bottom: 2px solid #DA063B;}
+.register_centre .register_banner .shopping .shopping_top ul .h{ height:306px;background:rgba(255,255,255,1); overflow:hidden;}
+.register_centre .register_banner .shopping .shopping_top ul .h p{ width:200px; margin:0 19px;}
+.register_centre .register_banner .shopping .shopping_top ul .h p span{ color:rgba(0,0,0,1);}
+.register_centre .register_banner .shopping .shopping_top ul .h p i{ float:left;display:block; font-size:12px; color:#DA063B; margin-top:30px;}
+.register_centre .register_banner .shopping .shopping_top ul .h p s{ float:left; margin-left:5px;display:block; color:#999999; font-size:12px;  margin-top:30px;}
+.register_centre .register_banner .shopping .shopping_top ul .h p em{ border:1px solid #999999; font-style:normal; float:right; margin-left:5px;display:block; width:82px; height:24px; background:#FFF8E1;font-weight:200; text-align:center; font-size:12px;  margin-top:20px;}
+.register_centre .register_banner .shopping .shopping_top ul .h p em a{ display:block; color:#DA063B; padding:2px 0; }
+.register_centre .register_banner .shopping .shopping_top ul .h p em:hover{ background:#DA063B;}
+.register_centre .register_banner .shopping .shopping_top ul .h p em:hover a{ color:rgba(255,255,255,1);}
+
+</style>-->
+</head>
+<body>
+<div class="top">
+  <div class="top_frame">
+    <div class="top_enter">
+      <p><a href="#">Hi，请登录</a></p>
+      <p><a href="#" style="color:#d7063b">免费注册</a><span>&nbsp;|&nbsp;</span></p>
+    </div>
+    <div class="right">
+      <ul>
+        <li>
+          <p id="fei"><a href="#">我的飞牛<i class="fa fa-angle-down zz"></i></a></p>
+          <p><span>&nbsp;|&nbsp;</span></p>
+          <div class="my">
+            <dl>
+              <p><a href="#"><img src="../images/head-pic.png"></a><a class="log" href="#">你好，请登录</a></p>
+            </dl>
+            <dl>
+              <dd><a href="#">账户余额</a><a href="#">我的购物卡</a><a href="#">我的优惠券</a><a href="#">我的积分</a></dd>
+              <dd><a href="#">待处理订单</a><a href="#">我的收藏</a><a href="#">我的评价</a></dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <p><a href="#">我的订单</a><span>&nbsp;|&nbsp;</span></p>
+        </li>
+        <li style="margin-left:15px;"><span style="display:inline-block; width: 11px; height: 18px; background: url(../images/fn_g_header.png) no-repeat -36px -96px;margin-right:5px;margin-top:8px; position:absolute; left:-7px;"></span><a href="#" style="color:#d7063b;">卡卷充值</a><span>&nbsp;|&nbsp;</span></li>
+        <li>
+          <p id="f"><a href="#">客户服务</a><i class="fa fa-angle-down zz" style=""></i></p>
+          <p><span>&nbsp;|&nbsp;</span></p>
+          <div class="server"><a href="#">帮助中心</a><a href="#">在线客服</a></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="register">
+  <div class="register_top"> <img class="plan_left" src="../images/fnw.png">
+    <div class="plan">
+      <div class="plan_top">
+        <p>我的购物车</p>
+        <p>填写核对订单信息</p>
+        <p>成功提交订单</p>
+      </div>
+      <div class="plan_bottom"><img src="../images/s-cart.png"></div>
+    </div>
+  </div>
+</div>
+<div class="register_centre clearfix">
+  <div class="register_banner  wrap">
+    <div class="shopping">
+      <div class="shopping_top">
+        <ul>
+          <li class="a">
+            <p>全部商品 1</p>
+          </li>
+          <li class="men b">
+            <p style=" width:76px;">
+              <input type="checkbox" >
+              全选</p>
+            <p style=" width:360px;">商品名称</p>
+            <p style=" width:200px;">单价（元）</p>
+            <p style=" width:120px;">数量</p>
+            <p style=" width:200px;">小计（元）</p>
+            <p style=" width:90px;">重量</p>
+            <p style=" width:130px;">操作</p>
+          </li>
+          <li class="c">
+            <p>
+              <input type="checkbox" >
+              飞牛自营</p>
+          </li>
+          <li class="men d">
+            <p style="padding-left:15px;">
+              <input type="checkbox"  >
+            </p>
+            <a href="#">
+            <p> <img style=" margin-left:18px;" src="../images/hfs.jpg"></p></a>
+            <p class="dd" style=" width:310px; "><a href="#" style=" padding-right:80px;">海飞丝男士去屑洗发露劲感净透190ml/瓶</a></p>
+            <p style=" width:200px;">27.90</p>
+            <p class="gw_num"  style="cursor:pointer; width:120px;"><em style="font-size:20px; font-weight:800; font-style:normal;" class="jian"><button style="background:rgba(255,255,255,1); border:1px solid rgba(153,153,153,1); width:20px; height:19px;">-</button></em>
+              <input type="text" value="1" style="width:50px; text-align:center;" class="num"/>
+              <em style="font-size:20px; font-style:normal; cursor:pointer;" class="add"><button style="background:rgba(255,255,255,1); border:1px solid rgba(153,153,153,1); width:20px; height:19px;">+</button></em></p>
+            <p style=" width:200px; color:#DA063B;">27.90</p>
+            <p style=" width:90px;">0.22kg</p>
+            <p style=" width:130px;"><a href="#">移入收藏夹</a><br>
+              <a href="#">删除</a></p>
+          </li>
+          <li class="men e">
+          <div class="ee">
+            <p style="color:#999999;">件数 <br><span>0</span></p>
+            <p style="color:#999999;">重量（kg）<br><span>0</span></p>
+            <p>已优惠（元）<br><span style="color:#DA063B;">-￥0</span></p>
+            <p>运费（元）<br><span style="color:#DA063B;">￥0</span></p>
+            <p>小计（元）<br><span style="color:#DA063B;">￥0</span></p>
+            </div>
+          </li>
+          <li class="men e" style="margin-top:30px;">
+          <div class="ee">
+            <p style="color:#999999;">件数：5件∨</p>
+            <p style="color:#999999;">商品总量：1.1kg</p>
+            <p style="color:#999999;">商品总金额：￥139.5</p>
+            <p style="color:#999999;">已优惠：￥0</p>
+            </div>
+          </li>
+          <li class="men f"> 
+             <div class="f_left"><p><input type="checkbox"><span style="margin-left:5px;">全选</span></p><p><a href="#">删除选中的商品</a></p><p><a href="#">清空购物车</a></p><p><a href="#">批量已移入收藏夹</a></p></div>
+             <div class="f_right"><p>应付金额：<span><small>￥</small>139.50</span></p><p><a href="#"><button>立即结算</button></a></p></div>
+          
+          </li>
+          <li class="men g"><p>猜你喜欢</p></li>
+          
+          <li class="men h">
+          <p><a href="#"><img  src="../images/zh.jpg"></a> <a href="#"><span>中华健齿白清新薄荷味牙膏 250克/支</span></a> <i><small>￥</small>8.4</i> <s><small>￥</small>8.5</s><em><a href="#">加入购物车</a></em></p>
+          <p><a href="#"><img  src="../images/jjs.jpg"></a> <a href="#"><span>中华健齿白清新薄荷味牙膏 250克/支</span></a> <i><small>￥</small>8.4</i> <s><small>￥</small>8.5</s><em><a href="#">加入购物车</a></em></p>
+          <p><a href="#"><img  src="../images/xy.jpg"></a> <a href="#"><span>中华健齿白清新薄荷味牙膏 250克/支</span></a> <i><small>￥</small>8.4</i> <s><small>￥</small>8.5</s><em><a href="#">加入购物车</a></em></p>
+          <p><a href="#"><img  src="../images/da.jpg"></a> <a href="#"><span>中华健齿白清新薄荷味牙膏 250克/支</span></a> <i><small>￥</small>8.4</i> <s><small>￥</small>8.5</s><em><a href="#">加入购物车</a></em></p>
+          <p><a href="#"><img  src="../images/qy.jpg"></a> <a href="#"><span>中华健齿白清新薄荷味牙膏 250克/支</span></a> <i><small>￥</small>8.4</i> <s><small>￥</small>8.5</s><em><a href="#">加入购物车</a></em></p>
+          </li>
+        
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js" ></script> 
+<script type="text/javascript">
+		$(document).ready(function(){
+			//加的效果
+			$(".add").click(function(){
+			var n=$(this).prev().val();
+			var num=parseInt(n)+1;
+			if(num==0){ return;}
+			$(this).prev().val(num);
+			});
+			//减的效果
+			$(".jian").click(function(){
+			var n=$(this).next().val();
+			var num=parseInt(n)-1;
+			if(num==0){ return}
+			$(this).next().val(num);
+			});
+		})
+	</script>
+<div class="footer mt20" tp-area="1009" style="border:0 none;">
+  <div class="footer-map ma oh" >
+    <ul class="fixed">
+      <li class="map"> <img class="footer-icon" src="../images/1.png"> <strong class="tit">正品低价</strong> <br>
+        <span class="desc">正品行货 品质保障</span> </li>
+      <li class="line"></li>
+      <li class="map"> <img class="footer-icon" src="../images/2.png"> <strong class="tit">品类齐全</strong> <br>
+        <span class="desc">品类齐全 选择丰富</span> </li>
+      <li class="line"></li>
+      <li class="map"> <img class="footer-icon" src="../images/3.png"> <strong class="tit">快速配送</strong> <br>
+        <span class="desc">多仓直发 极速配送</span> </li>
+      <li class="line"></li>
+      <li class="map"> <img class="footer-icon" src="../images/4.png"> <strong class="tit">售后无忧</strong> <br>
+        <span class="desc">7天无理由退货</span> </li>
+    </ul>
+  </div>
+  <div class="site-info" tp-childarea="botinfo">
+    <div class="foot-nav"> <a rel="nofollow" href="#" target="_blank">公司介绍</a>| <a rel="nofollow" href="#" target="_blank">联系我们</a>| <a rel="nofollow" href="#" target="_blank">飞牛招聘</a>| <a rel="nofollow" href="#" target="_blank">媒体报道</a>| <a href="#" target="_blank">热搜索词</a>| <a href="#" target="_blank">评价中心</a>| <a href="#" target="_blank">友情链接</a>| <a rel="nofollow" href="#" target="_blank">商家入驻</a>| <a rel="nofollow" href="#" target="_blank">招商标准</a>| <a rel="nofollow" href="#" target="_blank">开放平台</a>| <a rel="nofollow" href="#" style="cursor:default;text-decoration:none;">企业团购 021-36695538</a>| <a rel="nofollow" href="#" style="cursor:default;text-decoration:none;">客服热线 400-920-6565</a> </div>
+    <div class="link">
+      <p> <a href="#" target="_blank" style="color: #666;">沪公网安备 31010802001821号</a>　|　<a href="#" target="_blank" style="color: #666;">沪ICP备14034590号</a>　|　<a href="#" target="_blank" style="color: #666;">食品经营许可证 JY13101060025900</a>　|　<a href="#" target="_blank" style="color: #666;">酒类商品零售许可证 沪静酒专字 第0818030108000002号</a> </p>
+      <p> 出版物经营许可证编号新出发（沪）零字第Z6216号　|　快递业务经营许可证编号：沪邮20131324B　|　<a href="http://img18.fn-mart.com/pic/4e21133d4c1adc27a686/knqnTT5nFzCghdZdjT/79eGmGJaFG0aZx/CsmRslj0F8KAKz_iAAud2ZblLQI424.png" target="_blank" style="color: #666;"> 营业执照</a> </p>
+      <p> Copyright © 2013-2016 飞牛网, All Rights Reserved. </p>
+    </div>
+    <div class="inline-box logowall"> <a href="#" class="item" target="_blank" rel="nofollow"> <img src="../images/5.png"> </a> <a href="#"> <img src="../images/11.jpg"> </a> <a href="#" class="item" target="_blank" rel="nofollow"> <img src="../images/15.jpg"> </a> <a href="#" class="item" target="_blank" rel="nofollow"> <img src="../images/12.jpg"> </a> <a href="#" class="item" target="_blank" rel="nofollow"> <img src="../images/13.jpg"> </a> <a href="#" class="item" target="_blank" rel="nofollow"> <img src="../images/14.jpg"> </a> <a href="#" class="item" target="_blank" rel="nofollow"> <img src="../images/6.png"> </a> </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,482 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link  rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="../css/base.css">
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="../css/search.css">
+<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery.SuperSlide.2.1.1.js"></script>
+<style type="text/css">
+/*面包屑*/
+.crumbs_b{ width:100%;  border-top:1px solid rgba(0,0,0,1);}
+.crumbs_b .crumbs{ width:1190px; margin:0 auto;}
+.crumbs_b .crumbs ul{ float:left; padding-top:10px;}
+.crumbs_b .crumbs ul li{float:left; margin-right:15px; }
+.crumbs_b .crumbs ul .crumbs_a{  border:1px solid #A9A9A9; }
+/*搜索框*/
+.searcha{ width:1190px; border:1px solid rgba(153,153,153,0.7); margin-top:20px;}
+.searcha .search_p ul { width:1190px; height:40px;line-height:40px; border-bottom:1px solid rgba(153,153,153,0.3);}
+.searcha .search_p ul li{ float:left;  }
+.searcha .search_p ul li p{ height:40px;width:150px;  background:rgba(204,204,204,0.3);}
+.searcha .search_p ul li p span{ float:right;color: rgba(102,102,102,1); font-size:12px; margin-right:20px;}
+.searcha .search_p ul li a{  display:block; width:71px; margin:0 15px; color:rgba(0,0,0,1);}
+.searcha .search_p ul li a:hover{ color: rgba(204,0,51,1);}
+.searcha .search_p ul li i{ font-size:12px;}
+/*search_tj*/
+.search_tj .search_tj_left{ float:left; width:180px; border:1px solid rgba(204,204,204,0.5); margin-top:20px;}
+.search_tj .search_tj_left ul li img{ width:160px; height:160px; display:block;}
+.search_tj .search_tj_left ul li h1{ height:37px; line-height:37px; padding-left:10px; font-size:14px; border-bottom:1px solid rgba(204,204,204,1); margin-bottom:10px;}
+.search_tj .search_tj_left ul li p{ margin-top:10px;}
+.search_tj .search_tj_left ul li p a{ color:rgba(0,0,0,1);}
+.search_tj .search_tj_left ul li p a:hover{ color:rgba(204,0,0,1);}
+
+.search_tj .search_tj_right{  width:1000px;  border:1px solid rgba(204,204,204,0.5); float:left; margin-left:10px;margin-top:20px;}
+.search_tj .search_tj_right .right_bottom li p{ float:left;}
+.search_tj .search_tj_right .right_bottom .search_tj_right_a{ height:38px; background:rgba(153,153,153,0.3); }
+.search_tj .search_tj_right .right_bottom .search_tj_right_a p{border: 1px solid transparent; width:50px; height:28px; text-align:center; margin:5px 5px; line-height:26px; background:rgba(255,255,255,1);}
+.search_tj .search_tj_right .right_bottom .search_tj_right_a p:hover{ border:1px solid rgba(204,0,0,1); color: rgba(204,0,0,1);}
+.search_tj .search_tj_right .right_bottom_a li{ width:230px;border: 1px solid transparent; margin:9px; float:left; }
+.search_tj .search_tj_right .right_bottom_a li p{ margin-top:10px; font-size:12px; padding:0 10px;}
+.search_tj .search_tj_right .right_bottom_a li p span{ color:rgba(204,0,0,1);}
+.search_tj .search_tj_right .right_bottom_a li button{ border:1px solid rgba(204,204,204,1); background:rgba(255,204,204,0.6); width:92px; height:30px; color:rgba(255,0,0,1);}
+.search_tj .search_tj_right .right_bottom_a li button:hover{ background:rgba(255,0,0,1); color:rgba(255,255,255,1);  }
+</style>
+<title>搜索</title>
+</head>
+
+<body>
+<div class="top">
+  <div class="top_frame">
+    <div class="top_enter">
+      <p><a href="#">Hi，请登录</a></p>
+      <p><a href="#" style="color:#d7063b">免费注册</a><span>&nbsp;|&nbsp;</span></p>
+    </div>
+    <div class="top_entera">
+      <dl>
+        <p style="font-size:12px; color:#666666">送货至：</p>
+        <a href="#" style="display:block;">上海<i class="fa fa-angle-down zz"></i></a>
+        <div class="submenu">
+          <ul id="site_left">
+            <li>
+              <p>A</p>
+              <a href="#">安徽</a></li>
+            <li>
+              <p>B</p>
+              <a href="#">北京</a></li>
+            <li>
+              <p>C</p>
+              <a href="#">重庆</a></li>
+            <li>
+              <p>F</p>
+              <a href="#">福建</a></li>
+            <li>
+              <p>G</p>
+              <a href="#">广东</a><a href="#">广西</a><a href="#">贵州</a><a href="#">甘肃</a></li>
+            <li>
+              <p>H</p>
+              <a href="#">河北</a><a href="#">黑龙江</a><a href="#">海南</a><a href="#">湖北</a><a href="#">湖南</a><a href="#">河南</a></li>
+            <li>
+              <p>J</p>
+              <a href="#">江苏</a><a href="#">吉林</a><a href="#">江西</a></li>
+            <li>
+              <p>L</p>
+              <a href="#">辽宁</a></li>
+          </ul>
+          <ul id="site_right">
+            <li>
+              <p>N</p>
+              <a href="#">内蒙古西</a><a href="#">内蒙古东</a><a href="#">宁夏</a></li>
+            <li>
+              <p>Q</p>
+              <a href="#">青海</a></li>
+            <li>
+              <p>S</p>
+              <a href="#">上海</a><a href="#">山东</a><a href="#">山西</a><a href="#">四川</a><a href="#">陕西</a></li>
+            <li>
+              <p>T</p>
+              <a href="#">天津</a></li>
+            <li>
+              <p>X</p>
+              <a href="#">西藏</a><a href="#">新疆</a></li>
+            <li>
+              <p>Y</p>
+              <a href="#">云南</a></li>
+            <li>
+              <p>Z</p>
+              <a href="#">浙江</a></li>
+          </ul>
+        </div>
+      </dl>
+    </div>
+    <div class=" t">
+      <ul>
+        <li><a href="#">关注我们：</a></li>
+        <li><a href="#"><i></i></a></li>
+        <li><a href="#"><span></span></a>
+          <div class="weixin" style="text-align:center; line-height:20px;">
+            <p style="font-size:12px;">扫描二维码</p>
+            <p style="font-size:12px;">关注飞牛网官方微信</p>
+            <a href="#"><img src="../images/weixin.png"></a> </div>
+        </li>
+      </ul>
+    </div>
+    <div class="right">
+      <ul>
+        <li>
+          <p id="fei"><a href="#">我的飞牛<i class="fa fa-angle-down zz"></i></a></p>
+          <p><span>&nbsp;|&nbsp;</span></p>
+          <div class="my">
+            <dl>
+              <p><a href="#"><img src="../images/head-pic.png"></a><a class="log" href="#">你好，请登录</a></p>
+            </dl>
+            <dl>
+              <dd><a href="#">账户余额</a><a href="#">我的购物卡</a><a href="#">我的优惠券</a><a href="#">我的积分</a></dd>
+              <dd><a href="#">待处理订单</a><a href="#">我的收藏</a><a href="#">我的评价</a></dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <p><a href="#">我的订单</a><span>&nbsp;|&nbsp;</span></p>
+        </li>
+        <li style="margin-left:15px;"><span style="display:inline-block; width: 11px; height: 18px; background: url(images/fn_g_header.png) no-repeat -36px -96px;margin-right:5px;margin-top:8px; position:absolute; left:-7px;"></span><a href="#" style="color:#d7063b;">卡卷充值</a><span>&nbsp;|&nbsp;</span></li>
+        <li>
+          <p id="shouji"><i class="fa fa-mobile" aria-hidden="true" style="font-size:20px;  "></i><a id="shouji" href="#">手机飞牛网<i class="fa fa-angle-down zz" style="padding-left: 5px;"></i></a></p>
+          <p><span>&nbsp;|&nbsp;</span></p>
+          <div class="phone">
+            <dl>
+              <a href="#"><img src="../images/feiniu.jpg"></a>
+            </dl>
+            <dl>
+              <p class="sao" style="font-size:12px; margin-left:4px;">扫一扫，下载飞牛客户端</p>
+              <p style="font-size:12px; margin-left:4px;">首次登录APP送5元优惠券</p>
+              <p style="margin-top:15px; margin-left:15px;"><a href="#"><i></i></a><a href="#"><span></span></a></p>
+            </dl>
+          </div>
+        </li>
+        <li><a href="#">积分商城</a><span>&nbsp;|&nbsp;</span> </li>
+        <li>
+          <p id="f"><a href="#">客户服务</a><i class="fa fa-angle-down zz" style=""></i></p>
+          <p><span>&nbsp;|&nbsp;</span></p>
+          <div class="server"> <a href="#">帮助中心</a><a href="#">在线客服</a> </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="search">
+    <div class="gif"> <img src="../images/fnw.png"> <img src="../images/a.gif"> </div>
+    <div class="search_k"> <i class="fa fa-search" aria-hidden="true" style="font-size:21px; color:#dedede; padding:8px;"></i>
+      <form class="search_news"  style=" float:right; ">
+        <input type="text" style="width:405px; height:34px; font-size:15px; border:none; ">
+        <input type="hidden" class="search_a" disabled="disabled" name="cpseq">
+        <a href="#">
+        <button class="search_b" style="width:100px; height:38px; background:#d7063b; border:2px solid #d7063b; display:block; margin-top:-2px; float:right; color:#FFF; font-size:20px;" >搜索</button>
+        </a>
+      </form>
+      <div class="recommend"> <a href="#">酸奶</a><a href="#">抽纸</a><a href="#">冬装热卖</a><a href="#">面膜</a><a href="#">三段</a><a href="#">进口食品</a><a href="#">生鲜馆</a> </div>
+    </div>
+    <div class="shop">
+      <li>
+        <p><span>我的购物车</span><i class="fa fa-shopping-cart xx" aria-hidden="true">(0)</i></p>
+        <div class="shopa"><i class="fa fa-shopping-cart" aria-hidden="true" style="font-size:40px; color:#cccccc;"></i>
+          <h1 style="font-size:12px; color:#cccccc;">购物车中没有飞牛商品哟！</h1>
+        </div>
+      </li>
+    </div>
+  </div>
+</div>
+<!--第二部分-->
+<div class="menu">
+  <div class="menu_a">
+    <div class="left_top">
+      <p class="del"><i class="fa fa-list-ul"></i><span>全部商品分类</span></p>
+      <div class="leftSidebar">
+        <ul>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">生活食品、冷藏冷冻</a></span>
+            <div class="leftSidebar_submenu">
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果</a><a href="#">奇异果/猕猴桃/凤梨</a><a href="#">梨榴莲</a><a href="#">山竹/浆果</a><a href="#">莓类/热带水果/椰子类/车厘子</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果</a><a href="#">奇异果/猕猴桃/凤梨</a><a href="#">山竹/浆果</a><a href="#">莓类/热带水果/椰子类/车厘子</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃/凤梨</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+              </div>
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+              </div>
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">梨榴莲</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+              </div>
+              <div class="one"></div>
+            </div>
+          </li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">食品、饮料、酒水</a> </span>
+            <div class="leftSidebar_submenu">
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果</a><a href="#">奇异果/猕猴桃/凤梨</a><a href="#">梨榴莲</a><a href="#">山竹/浆果</a><a href="#">莓类/热带水果/椰子类/车厘子</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果</a><a href="#">奇异果/猕猴桃/凤梨</a><a href="#">山竹/浆果</a><a href="#">莓类/热带水果/椰子类/车厘子</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃/凤梨</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+              </div>
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">梨榴莲</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+              </div>
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+              </div>
+              <div class="one"></div>
+            </div>
+          </li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">进口好货、进口食品</a></span>
+            <div class="leftSidebar_submenu">
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果</a><a href="#">奇异果/猕猴桃/凤梨</a><a href="#">梨榴莲</a><a href="#">山竹/浆果</a><a href="#">莓类/热带水果/椰子类/车厘子</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果</a><a href="#">奇异果/猕猴桃/凤梨</a><a href="#">山竹/浆果</a><a href="#">莓类/热带水果/椰子类/车厘子</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃/凤梨</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+              </div>
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">梨榴莲</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+              </div>
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">梨榴莲</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+              </div>
+              <div class="one"></div>
+            </div>
+          </li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">美容洗护、个人护理</a></span>
+            <div class="leftSidebar_submenu">
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果</a><a href="#">奇异果/猕猴桃/凤梨</a><a href="#">梨榴莲</a><a href="#">山竹/浆果</a><a href="#">莓类/热带水果/椰子类/车厘子</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果</a><a href="#">奇异果/猕猴桃/凤梨</a><a href="#">山竹/浆果</a><a href="#">莓类/热带水果/椰子类/车厘子</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃/凤梨</a><a href="#">樱桃/柿子/桃李杏枣/香蕉</a> </dd>
+              </div>
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">梨榴莲</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+              </div>
+              <div class="one">
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">梨榴莲</a><a href="#">山竹浆果</a><a href="#">莓类热带水果椰子类车厘子</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+                <dd>
+                  <h1><a href="#">新鲜水果</a></h1>
+                  <a href="#">国产水果奇异果</a><a href="#">猕猴桃凤梨</a><a href="#">樱桃柿子桃李杏枣香蕉</a> </dd>
+              </div>
+              <div class="one"></div>
+            </div>
+          </li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">家清纸品、厨具餐具</a></span></li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">家纺、家居、家装</a></span></li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">女装、内衣、腕表配饰</a></span></li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">汽配、车载用品</a></span></li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">母婴、童装、玩具</a></span></li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">男装、运动、户外</a></span></li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">鞋靴、箱包、奢侈品</a></span></li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">图书、文具、电教</a></span></li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">保健、计生、器械</a></span></li>
+          <li><span><i class="fa fa-television" aria-hidden="true"></i><a href="#">购物卡、票卡</a></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="nav">
+      <ul>
+        <li><a href="#">进口好货</a></li>
+        <li><a href="#">母婴馆</a></li>
+        <li><a href="#">美食城</a></li>
+        <li><a href="#">美护馆</a></li>
+        <li><a href="#">飞牛团</a></li>
+        <li><a href="#">自创品牌</a><i></i></li>
+      </ul>
+    </div>
+    <img src="../images/b.gif"> </div>
+</div>
+<div class="crumbs_b clearfix">
+<div class="crumbs">
+	<ul>
+    	<li><a style=" color:rgba(0,0,0,1);" href="#">搜索结果</a></li>
+        <li>></li>
+        <li><a style=" color:rgba(0,0,0,1);" href="#">海飞丝</a></li>
+        <li>></li>
+        <li class="crumbs_a"><input style="border:0 none;color:#A9A9A9;" type="text" value="在结果中查找"><i class="fa fa-search" aria-hidden="true"></i></li>
+    </ul>
+    <ul style="float:right; ">	
+        <li ><p><a style="color:rgba(0,0,0,1);" href="#">清空筛选条件</a></p></li>
+    </ul>
+</div>
+</div>
+<div class="searcha wrap clearfix">
+	<div class="search_p">
+    	<ul>
+        <li><p><span>美发护发</span></p></li>
+        <li><a href="#">洗发水</a></li>
+        </ul>
+    	<ul>
+        <li><p><span>原产区</span></p></li>
+        <li><a href="#">欧美品牌</a></li>
+        <li><a href="#">国货精品</a></li>
+        <li style="float:right; margin-right:50px;"><a href="#"><button>+ 多选</button></a></li>
+
+        </ul>
+    	<ul>
+        <li><p><span>国产/进口</span></p></li>
+        <li><a href="#">进口</a></li>
+        <li><a href="#">国产</a></li>
+        <li style="float:right; margin-right:50px;"><a href="#"><button>+ 多选</button></a></li>
+        </ul>        
+    	<ul>
+        <li><p><span>美发功效</span></p></li>
+        <li><a href="#">去屑止痒</a></li>
+        <li><a href="#">控油平衡</a></li>
+        <li><a href="#">深层滋润</a></li>
+        <li><a href="#">损伤修复</a></li>
+        <li><a href="#">柔顺丝滑</a></li>
+        <li><a href="#">烫后护卷</a></li>
+        <li style="float:right; margin-right:50px;"><a href="#"><button>+ 多选</button></a></li>
+
+        </ul>        
+    	<ul>
+        <li><p><span>价格</span></p></li>
+        <li><a href="#">28元以下</a></li>
+        <li><a href="#">28-49元</a></li>
+        <li><a href="#">49-80元</a></li>
+        <li><a href="#">80-87元</a></li>
+        <li><a href="#">87元以上</a></li>
+        </ul>        
+    	<ul>
+        <li><p><span><i class="fa fa-caret-right" aria-hidden="true"></i>更多筛选选项</span></p></li>
+        <li><a href="#">适用人群 <i class="fa fa-chevron-down"></i></a></li>
+        <li><a href="#">使用发质 <i class="fa fa-chevron-down"></i></a></li>
+        <li><a href="#">规格 <i class="fa fa-chevron-down"></i></a></li>
+        <li><a href="#">其他分类 <i class="fa fa-chevron-down"></i></a></li>
+        </ul>        
+    </div>
+</div>
+<div class="search_tj wrap clearfix">
+	<div class="search_tj_left">
+    	<ul>
+        	<li><h1>推荐热卖</h1></li>
+            <li><a href="#"><img src="../images/tj.jpg"></a><p><a href="#">海飞丝 男士去屑洗发露活力酷爽型 1L/瓶
+</a></p><p><span style="color:rgba(204,0,0,1); margin-top:10px;"><small>¥</small>109.9</span></p></li>
+            <li><a href="#"><img src="../images/tj.jpg"></a><p><a href="#">海飞丝 男士去屑洗发露活力酷爽型 1L/瓶
+</a></p><p><span style="color:rgba(204,0,0,1); margin-top:10px;"><small>¥</small>109.9</span></p></li>
+            <li><a href="#"><img src="../images/tj.jpg"></a><p><a href="#">海飞丝 男士去屑洗发露活力酷爽型 1L/瓶
+</a></p><p><span style="color:rgba(204,0,0,1); margin-top:10px;"><small>¥</small>109.9</span></p></li>
+            <li><a href="#"><img src="../images/tj.jpg"></a><p><a href="#">海飞丝 男士去屑洗发露活力酷爽型 1L/瓶
+</a></p><p><span style="color:rgba(204,0,0,1); margin-top:10px;"><small>¥</small>109.9</span></p></li>
+            <li><a href="#"><img src="../images/tj.jpg"></a><p><a href="#">海飞丝 男士去屑洗发露活力酷爽型 1L/瓶
+</a></p><p><span style="color:rgba(204,0,0,1); margin-top:10px;"><small>¥</small>109.9</span></p></li>
+            <li><a href="#"><img src="../images/tj.jpg"></a><p><a href="#">海飞丝 男士去屑洗发露活力酷爽型 1L/瓶
+</a></p><p><span style="color:rgba(204,0,0,1); margin-top:10px;"><small>¥</small>109.9</span></p></li>
+            <li><a href="#"><img src="../images/tj.jpg"></a><p><a href="#">海飞丝 男士去屑洗发露活力酷爽型 1L/瓶
+</a></p><p><span style="color:rgba(204,0,0,1); margin-top:10px;"><small>¥</small>109.9</span></p></li>
+
+        </ul>
+    </div>
+    <div class="search_tj_right">
+    	<ul class="right_bottom">
+        	<li class="search_tj_right_a"><p style="background:rgba(204,0,0,1);"><span style="color:rgba(255,255,255,1);">综合</span></p><p><span>销量</span></p><p><span>价格</span></p><p><span>评论</span></p><p><span>新品</span></p></li>
+        </ul>
+        <ul class="right_bottom_a">
+        	<li><a href="#"><img src="../images/tj1.jpg"></a><p><span><small>￥</small>86.9</span></p><p>海飞丝去屑洗发露护根防掉型750毫升/瓶</p><p><button>加入购物车</button></p></li>
+        	<li><a href="#"><img src="../images/tj1.jpg"></a><p><span><small>￥</small>86.9</span></p><p>海飞丝去屑洗发露护根防掉型750毫升/瓶</p><p><button>加入购物车</button></p></li>
+        	<li><a href="#"><img src="../images/tj1.jpg"></a><p><span><small>￥</small>86.9</span></p><p>海飞丝去屑洗发露护根防掉型750毫升/瓶</p><p><button>加入购物车</button></p></li>
+        	<li><a href="#"><img src="../images/tj1.jpg"></a><p><span><small>￥</small>86.9</span></p><p>海飞丝去屑洗发露护根防掉型750毫升/瓶</p><p><button>加入购物车</button></p></li>
+        	<li><a href="#"><img src="../images/tj1.jpg"></a><p><span><small>￥</small>86.9</span></p><p>海飞丝去屑洗发露护根防掉型750毫升/瓶</p><p><button>加入购物车</button></p></li>
+        	<li><a href="#"><img src="../images/tj1.jpg"></a><p><span><small>￥</small>86.9</span></p><p>海飞丝去屑洗发露护根防掉型750毫升/瓶</p><p><button>加入购物车</button></p></li>
+        	<li><a href="#"><img src="../images/tj1.jpg"></a><p><span><small>￥</small>86.9</span></p><p>海飞丝去屑洗发露护根防掉型750毫升/瓶</p><p><button>加入购物车</button></p></li>
+        	<li><a href="#"><img src="../images/tj1.jpg"></a><p><span><small>￥</small>86.9</span></p><p>海飞丝去屑洗发露护根防掉型750毫升/瓶</p><p><button>加入购物车</button></p></li>
+        	<li><a href="#"><img src="../images/tj1.jpg"></a><p><span><small>￥</small>86.9</span></p><p>海飞丝去屑洗发露护根防掉型750毫升/瓶</p><p><button>加入购物车</button></p></li>
+        	<li><a href="#"><img src="../images/tj1.jpg"></a><p><span><small>￥</small>86.9</span></p><p>海飞丝去屑洗发露护根防掉型750毫升/瓶</p><p><button>加入购物车</button></p></li>
+        	<li><a href="#"><img src="../images/tj1.jpg"></a><p><span><small>￥</small>86.9</span></p><p>海飞丝去屑洗发露护根防掉型750毫升/瓶</p><p><button>加入购物车</button></p></li>
+        	<li><a href="#"><img src="../images/tj1.jpg"></a><p><span><small>￥</small>86.9</span></p><p>海飞丝去屑洗发露护根防掉型750毫升/瓶</p><p><button>加入购物车</button></p></li>
+        	<li><a href="#"><img src="../images/tj1.jpg"></a><p><span><small>￥</small>86.9</span></p><p>海飞丝去屑洗发露护根防掉型750毫升/瓶</p><p><button>加入购物车</button></p></li>
+        	<li><a href="#"><img src="../images/tj1.jpg"></a><p><span><small>￥</small>86.9</span></p><p>海飞丝去屑洗发露护根防掉型750毫升/瓶</p><p><button>加入购物车</button></p></li>
+        	<li><a href="#"><img src="../images/tj1.jpg"></a><p><span><small>￥</small>86.9</span></p><p>海飞丝去屑洗发露护根防掉型750毫升/瓶</p><p><button>加入购物车</button></p></li>
+        	<li><a href="#"><img src="../images/tj1.jpg"></a><p><span><small>￥</small>86.9</span></p><p>海飞丝去屑洗发露护根防掉型750毫升/瓶</p><p><button>加入购物车</button></p></li>
+        	<li><a href="#"><img src="../images/tj1.jpg"></a><p><span><small>￥</small>86.9</span></p><p>海飞丝去屑洗发露护根防掉型750毫升/瓶</p><p><button>加入购物车</button></p></li>
+        	<li><a href="#"><img src="../images/tj1.jpg"></a><p><span><small>￥</small>86.9</span></p><p>海飞丝去屑洗发露护根防掉型750毫升/瓶</p><p><button>加入购物车</button></p></li>
+        	<li><a href="#"><img src="../images/tj1.jpg"></a><p><span><small>￥</small>86.9</span></p><p>海飞丝去屑洗发露护根防掉型750毫升/瓶</p><p><button>加入购物车</button></p></li>
+        	<li><a href="#"><img src="../images/tj1.jpg"></a><p><span><small>￥</small>86.9</span></p><p>海飞丝去屑洗发露护根防掉型750毫升/瓶</p><p><button>加入购物车</button></p></li>
+
+        </ul>
+    </div>
+</div>
+</body>
+</html>

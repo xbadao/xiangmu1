@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* CSS Document */
+a { text-decoration: none; font-size: 12px; color: #666666; }
+.top { width: 100%; height: 35px; background: #f7f7f7; border: 1px solid #dedede; }
+.top .top_frame { width: 1190px; height: 100%; margin: 0 auto; line-height: 35px; }
+.top .top_frame a:hover { color: #d7063b; }
+.top .top_frame span { color: #dedede; }
+.top .top_frame i { padding-right: 4px; }
+.top .top_frame .top_enter { width: 136 px; height: 100%; float: left; padding: 0 5px; }
+.top .top_frame .top_enter p { float: left; font-size: 12px; padding: 0 3px; }
+.top .top_frame .top_entera { width: 101px; height: 100%; float: left; }
+.top .top_frame .top_entera dl p { padding: 0 3px; position: relative; float: left; font-size: 12px; }
+.top .top_frame .top_entera .submenu { z-index: 9; display: none; width: 556px; height: 240px; background: #FFF; position: absolute; top: 35px; padding-left: 6px; padding-top: 15px; border-collapse: collapse; }
+.top .top_frame .top_entera dl:hover .submenu { display: block; }
+.top .top_frame .top_entera dl { border: 1px solid transparent; border-bottom: 0 none; position: relative; z-index: 10; }
+.top .top_frame .top_entera dl:hover { background: #FFF; border: 1px solid #dedede; }
+.top .top_frame .top_entera dl i { padding-left: 5px; transition: all 0.5s ease; }
+.top .top_frame .top_entera dl:hover i { transform: rotate(180deg); transition: all 0.5s ease; }
+.top .top_frame .top_entera .submenu ul { width: 274px; height: 100%; float: left; overflow: hidden; line-height: 25px; }
+.top .top_frame .top_entera .submenu #site_left { border-right: 1px dashed #dddddd; }
+.top .top_frame .top_entera .submenu #site_left li a { padding-right: 10px; }
+.top .top_frame .top_entera .submenu #site_right li { margin-left: 17px; position: relative; }
+.top .top_frame .top_entera .submenu #site_right li a { padding-right: 10px; }
+.top .top_frame .top_entera .submenu li p { display: block; padding-top: 1px; }
+.top .top_frame .right { float: right; line-height: 32px; }
+.top .top_frame .right ul li { float: left; padding: 0 5px; position: relative; }
+.top .top_frame .right ul li P { float: left; }
+.top .top_frame .right ul li p#fei { padding-left: 5px; border: 1px solid transparent; border-bottom: 0 none; position: relative; z-index: 10; }
+.top .top_frame .right ul li:hover p#fei { background: #FFF; border: 1px solid #dedede; border-bottom: 0 none; }
+.top .top_frame .right ul li:hover .my { display: block; }
+.top .top_frame .right ul li:hover p .zz { transform: rotate(180deg); transition: all 0.5s ease; padding-left: 5px; }
+.top .top_frame .right ul li p i { padding-left: 5px; transition: all 0.5s ease; }
+.top .top_frame .right ul li .my { background: #FFF; z-index: 9; display: none; float: left; width: 282px; height: 214px; box-sizing: border-box; border: 1px solid #dedede; border-top: 0 none; position: absolute; margin-top: 38px; }
+.top .top_frame .right ul li .my dl p a img { width: 80px; height: 80px; background-color: #efefef; border: 2px #d1d1d1 solid; -webkit-border-radius: 60px; margin: 16px 16px; }
+.top .top_frame .right ul li .my dl { width: 100%; height: 105px; }
+.top .top_frame .right ul li .my dl dd { width: 138px; height: 100%; float: left; margin-top: -22px; }
+.top .top_frame .right ul li .my dl p .log { float: right; margin-right: 74px; margin-top: 40px; color: #000; font-size: 15px; }
+.top .top_frame .right ul li .my dl dd a { display: block; margin-left: 15px; line-height: 25px; }
+.top .top_frame .right ul li .phone { background: #FFF; z-index: 9; display: none; width: 296px; height: 160px; box-sizing: border-box; position: absolute; margin-top: 38px; }
+.top .top_frame .right ul li:hover .phone { display: block; }
+.top .top_frame .right ul li p#shouji { border: 1px solid transparent; border-bottom: 0 none; position: relative; z-index: 10; }
+.top .top_frame .right ul li:hover p#shouji { background: #FFF; border: 1px solid #dedede; border-bottom: 0 none; }
+.top .top_frame .right ul li .phone dl { width: 145px; height: 100%; float: left; }
+.top .top_frame .right ul li .phone dl img { margin: 15px 15px; }
+.top .top_frame .right ul li .phone dl p { line-height: 20px; }
+.top .top_frame .right ul li .phone dl .sao { margin-top: 12px; }
+.top .top_frame .right ul li .phone dl p i { float: left; display: block; width: 50px; height: 50px; background: url(../images/fn_g_header.png) no-repeat 0px -160px; }
+.top .top_frame .right ul li .phone dl p span { float: right; display: block; width: 50px; height: 50px; background: url(../images/fn_g_header.png) no-repeat -210px -103px; }
+.top .top_frame .right ul li .server { padding-left: 5px; background: #FFF; display: none; border: 1px solid #dedede; border-top: 0 none; width: 70px; height: 55px; box-sizing: border-box; position: absolute; margin-top: 38px; z-index: 9; }
+.top .top_frame .right ul li .server a { height: 24px; display: block; line-height: 20px; }
+.top .top_frame .right ul li:hover .server { display: block; }
+.top .top_frame .right ul li #f { border: 1px solid transparent; border-bottom: 0 none; position: relative; padding-left: 5px; }
+.top .top_frame .right ul li:hover #f { background: #FFF; border: 1px solid #dedede; border-bottom: 0 none; }
+.top .top_frame .t { float: right; width: 122px; height: 100%; padding: 0 2px; }
+.top .top_frame .t li { position: relative; float: left; padding: 0 2px; line-height: 32px; }
+.top .top_frame .t li span { display: block; width: 20px; height: 20px; background: url(../images/fn_g_header.png) no-repeat -87px -75px; margin-top: 8px; }
+.top .top_frame .t li i { display: block; width: 18px; height: 20px; background: url(../images/fn_g_header.png) no-repeat -109px -75px; margin-top: 8px; }
+.top .top_frame .t li .weixin { background: #FFF; position: relative; z-index: 9; display: none; width: 135px; height: 140px; margin-left: -110px; margin-top: 5px; }
+.top .top_frame .t li:hover .weixin { display: block; }
+/*第一部分*/
+.container { width: 100%; height: 80px; position: relative; }
+.container .search { width: 1190px; height: 100%; margin: 0 auto; }
+.container .search .gif { width: 360px; height: 60px; float: left; margin-top: 15px; }
+.container .search .search_k { width: 550px; height: 38px; float: left; border: 1px solid #d7063b; margin-top: 15px; }
+.container .search .search_k .recommend { width: 550px; height: 25px; margin-top: 1px; }
+.container .search .search_k .recommend a { margin-right: 10px; }
+.container .search .shop { position: relative; }
+.container .search .shop p { width: 144px; height: 45px; float: right; margin-top: 14px; margin-right: 20px; }
+.container .search .shop span { display: block; width: 80px; height: 45px; background: #e9e9e9; float: left; font-size: 13px; line-height: 45px; color: #666666; }
+.container .search .shop .xx { width: 64px; height: 45px; background: #d7063b; float: right; text-align: center; color: #FFF; font-size: 18px; line-height: 45px; }
+.container .search .shop li:hover .shopa { display: block; }
+.container .search .shop .shopa { background: #FFF; display: none; position: absolute; z-index: 40; width: 290px; height: 80px; border: 1px solid #e9e9e9; border-top: 2px solid #d7063b; left: 880px; top: 59px; }
+.container .search .shop .shopa i { float: left; margin-left: 30px; margin-top: 20px; }
+.container .search .shop .shopa h1 { float: right; margin-right: 65px; margin-top: 30px; font-style: normal; font-weight: 300; }
+/*第二部分*/
+
+.menu .menu_a .left_top:hover .leftSidebar{ display:block;}
+.menu { width: 100%; height: 40px; }
+.menu .menu_a { height: 100%; width: 1190px; margin: 0 auto; position: relative; margin-top:20px; }
+.menu .menu_a .left_top { width: 190px; height: 40px; background: #d7063b; line-height: 40px; float: left; margin-left: 5px; position: relative; }
+.menu .menu_a .left_top p { margin-left: 10px; color: #FFF; font-size: 14px; font-weight: 700; }
+.menu .menu_a .left_top span { margin-left: 10px; }
+.menu .menu_a .nav { float: left; }
+.menu .menu_a .nav ul { display: block; line-height: 40px; margin-left: 15px; }
+.menu .menu_a .nav ul li { float: left; position: relative; }
+.menu .menu_a .nav ul li a:hover { color: #F03； }
+.menu .menu_a .nav ul li a { color: #000; font-weight: 600; font-size: 15px; margin-right: 30px; }
+.menu .menu_a .nav ul li i { display: block; width: 28px; height: 15px; background: url(../images/fn_g_header.png) no-repeat 0px -141px; position: absolute; left: 52px; top: -2px; }
+.menu .menu_a img { position: absolute; right: 20px; top: -25px; }
+/*侧导航*/
+
+.menu .menu_a .left_top .leftSidebar { display:none; position: absolute; left: 0; top: 40px; background: #f8f5f6; width: 190px; height: 454px; box-sizing: border-box; z-index: 9; }
+.menu .menu_a .left_top .leftSidebar ul { line-height: 30px; margin-top: 2px; }
+.menu .menu_a .left_top .leftSidebar ul li { font-size: 13px; }
+.menu .menu_a .left_top .leftSidebar ul li i { font-weight: 300; margin-left: 10px; }
+.menu .menu_a .left_top .leftSidebar ul li a { color: #333333; font-weight: 400px; margin-left: 10px; }
+.menu .menu_a .left_top .leftSidebar ul li:hover { background: #d7063b; color: #FFF; }
+.menu .menu_a .left_top .leftSidebar ul li:hover span a { color: #FFF; text-decoration: underline; padding-left: 10px; transition: none 0.5s;/*-webkit-transform:translate(10px,20px); transition: all 0.5s ease;*/ }
+.menu .menu_a .left_top .leftSidebar ul li:hover span i { padding-left: 10px; transition: linear 0.5s }
+.menu .menu_a .left_top .leftSidebar ul li .leftSidebar_submenu { background: #FFF; display: none; width: 850px; height: 454px; position: absolute; border: 1px solid #d7063b; left: 187px; top: -0px; z-index: 10; }
+.menu .menu_a .left_top .leftSidebar ul li .leftSidebar_submenu .one { box-sizing: border-box; float: left; overflow: hidden; width: 200px; height: 100%; box-sizing: border-box; }
+.menu .menu_a .left_top .leftSidebar ul li .leftSidebar_submenu .one dd { margin-left: 5px; width: 100%; display: block; box-sizing: border-box; }
+.menu .menu_a .left_top .leftSidebar ul li .leftSidebar_submenu .one dd h1 { margin-bottom: 10px; font-style: normal; font-size: 12px; }
+.menu .menu_a .left_top .leftSidebar ul li .leftSidebar_submenu .one dd a { font-size: 12px; color: #666666; padding-left: 5px; }
+.menu .menu_a .left_top .leftSidebar ul li .leftSidebar_submenu .one dd a:hover { color: #d7063b; text-decoration: underline; }
+.menu .menu_a .left_top .leftSidebar ul li:hover .leftSidebar_submenu { display: block; }
+/*侧导航*/
+

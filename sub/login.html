@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>邮箱注册</title>
+<link  rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="../css/base.css">
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="../css/login.css">
+<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery.SuperSlide.2.1.1.js"></script>
+<!--<style type="text/css">
+body { background: #F5F5F5; }
+.login { width: 100%; height: 620px; }
+.login .login_top { width: 985px; height: 100%; margin: 0 auto; margin-top: 24px; }
+.login .login_top img { margin-left: 10px; float: left; }
+.login .login_top .zhuce { margin-left: 20px; display: inline-block; height: 40px; line-height: 40px; border-left: 1px solid #ddd; color: #6c6c6c; padding: 0px 15px; font-size: 22px; margin-top: 12px; }
+.login .login_top .slideTxtBox { width: 985px; height: 523px; margin-top: 20px;  }
+.login .login_top .slideTxtBox .hd { width: 985px; height: 37px; line-height: 30px; position: relative; z-index:100; }
+.login .login_top .slideTxtBox .hd ul {display:block width:767px; height: 37px; margin-left: 218px; }
+.login .login_top .slideTxtBox .hd ul .la { float: left; background:rgba(255,255,255,1); width: 130px; height: 37px; border: 1px solid #D5D5D5;  cursor: pointer;/*光标*/ margin-right: 10px; }
+.login .login_top .slideTxtBox .hd ul .la a { font-size: 14px; padding: 2px 35px; color: rgba(0,0,0,1); font-weight: 600; }
+.login .login_top .slideTxtBox .hd ul .lc { float: right; width: 151px; height: 34px; }
+.login .login_top .slideTxtBox .hd ul .lc p { font-size: 13px; padding-top: 12px; }
+.login .login_top .slideTxtBox .hd ul .la.on { height: 37px; width: 130px; background: #fff; border-top: 2px solid #cc0e3c; border-bottom: 2px solid #fff; }
+.login .login_top .slideTxtBox .hd ul .la.on a { color: #D7063B; }
+.login .login_top .slideTxtBox .aaaa{ width:985px; height:511px; margin-top:-1px; border:1px solid #D5D5D5; background:rgba(255,255,255,1);}
+.login .login_top .slideTxtBox .bd { width: 913px; height: 414px;  margin-left: 60px; margin-top: 42px; }
+.login .login_top .slideTxtBox .bd ul .line { display: block; width: 853px; height: 36px; margin-left: 50p; margin-bottom: 26px; }
+.login .login_top .slideTxtBox .bd ul .line { float: left; padding-left: 25px; position: relative; }
+.login .login_top .slideTxtBox .bd ul .line .linel .dt:before { content: "*"; width: 1px; display: block; position: absolute; left: 12px; top: 0px; z-index: 1; color: #D7063B; }
+.login .login_top .slideTxtBox .bd ul .line .linel { float: left; width: 85px; height: 34px; }
+.login .login_top .slideTxtBox .bd ul .line .linel .dt { display: block; font-size: 12px; line-height: 36px; }
+.login .login_top .slideTxtBox .bd ul .line input { float: left; }
+
+</style>-->
+</head>
+
+<body>
+<div class="login">
+  <div class="login_top"> <img src="../images/fnw.png">
+    <p class="zhuce">欢迎注册</p>
+    <div class="slideTxtBox">
+      <div class="hd">
+        <ul>
+          <li class="la"> <a href="#">手机注册</a> </li>
+          <li class="la"> <a href="#">邮箱注册</a> </li>
+          <li class="lc">
+            <p>我已注册，马上<a href="#">登录></a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="aaaa">
+        <div class="bd">
+          <ul>
+            <div class="line">
+              <label class="linel"><span class="dt">手机号码：</span></label>
+              <div class="liner">
+                <input type="text" style=" width:308px; height:36px; border:1px solid #CCCCCC;"  placeholder="请输入手机号码" orgin="请输入手机号码">
+              </div>
+            </div>
+            <div class="line">
+              <label class="linel"><span class="dt">图形验证码：</span></label>
+              <div class="liner">
+                <input type="text" style=" width:155px; height:36px; border:1px solid #CCCCCC;"  placeholder="" orgin="">
+                <span class="v-captcha"   ><img style=" width:85px; height:34px; margin-top:5px;" src="../images/yzm.png" id="captchaImg"><span style="font-size:11px; line-height:48px;margin-top:10px; ">看不清？<a id="cbtn" class="cbtn" style="font-size:11px; color:rgba(0,102,204,1);">换一张</a></span></span> </div>
+            </div>
+            <div class="line">
+              <label class="linel"  ><span class="dt">验证码：</span></label>
+              <div class="liner">
+                <input type="text" class="inp fcode J_code" placeholder="" orgin="" style="width:155px; height:36px; border:1px solid #CCCCCC;">
+                <button class="fn-fl icode disabled" id="sendSms" style="width:115px; height:35px; background:#F5F5F5; color:#D3D3D3; font-size:13px; border: 1px solid #D3D3D3; margin-left:15px;" disabled="">获取验证码</button>
+              </div>
+              <div id="show-voice" class="show-voice"></div>
+            </div>
+            <div class="line">
+              <label class="linel"><span class="dt">设置密码：</span></label>
+              <div class="liner">
+                <input type="password" class="inp fpass J_password nred"style="width:308px; height:36px; border:1px solid #CCCCCC;" placeholder="6-16位大小写英文字母、数字或符号的组合" autocomplete="off" orgin="6-16位大小写英文字母、数字或符号的组合">
+              </div>
+            </div>
+            <div class="line">
+              <label class="linel"><span class="dt">确认密码：</span></label>
+              <div class="liner">
+                <input type="password" class="inp fsecpass J_password2" style="width:308px; height:36px; border:1px solid #CCCCCC;"placeholder="请再次输入密码" autocomplete="off">
+              </div>
+            </div>
+            <div class="line liney clearfix">
+              <label class="linel">&nbsp;</label>
+              <div class="liner">
+                <div class="clearfix checkcon">
+                  <p class="fn-fl checktxt">
+                    <input type="checkbox" class="iyes fn-fl J_protocal" style="display:block; margin-top:6px; margin-right:5px;">
+                    <span class="fn-fl" style="font-size:12px;">我已阅读并同意</span><a class="itxt fn-fl" href="#" target="_blank" style="font-size:12px;">《飞牛网服务协议》</a></p>
+                </div>
+                <button style="width:250px; height:40px; background:#D7063B; margin-top:40px; font-size:18px; color:rgba(255,255,255,1); font-weight:600px; border:none;">同意协议并注册</button>
+              </div>
+            </div>
+          </ul>
+          
+          
+          <ul>
+          
+            <div class="line">
+              <label class="linel"><span class="dt">邮箱：</span></label>
+              <div class="liner">
+                <input type="text" style=" width:308px; height:36px; border:1px solid #CCCCCC;"  placeholder="请输入邮箱" orgin="请输入邮箱">
+              </div>
+            </div>
+          
+           <div class="line">
+              <label class="linel"><span class="dt">设置密码：</span></label>
+              <div class="liner">
+                <input type="password" class="inp fpass J_password nred"style="width:308px; height:36px; border:1px solid #CCCCCC;" placeholder="6-16位大小写英文字母、数字或符号的组合" autocomplete="off" orgin="6-16位大小写英文字母、数字或符号的组合">
+              </div>
+            </div>
+            <div class="line">
+              <label class="linel"><span class="dt">确认密码：</span></label>
+              <div class="liner">
+                <input type="password" class="inp fsecpass J_password2" style="width:308px; height:36px; border:1px solid #CCCCCC;"placeholder="请再次输入密码" autocomplete="off">
+              </div>
+            </div>
+          
+          
+            <div class="line">
+              <label class="linel"><span class="dt">手机号码：</span></label>
+              <div class="liner">
+                <input type="text" style=" width:308px; height:36px; border:1px solid #CCCCCC;"  placeholder="请输入手机号码" orgin="请输入手机号码">
+              </div>
+            </div>
+            
+            
+            <div class="line">
+              <label class="linel"><span class="dt">图形验证码：</span></label>
+              <div class="liner">
+                <input type="text" style=" width:155px; height:36px; border:1px solid #CCCCCC;"  placeholder="" orgin="">
+                <span class="v-captcha"   ><img style=" width:85px; height:34px;margin-top:5px;" src="../images/yzm.png" id="captchaImg"><span style="font-size:11px; line-height:48px;margin-top:10px; ">看不清？<a id="cbtn" class="cbtn" style="font-size:11px; color:rgba(0,102,204,1);">换一张</a></span></span> </div>
+            </div>
+            <div class="line">
+              <label class="linel"  ><span class="dt">验证码：</span></label>
+              <div class="liner">
+                <input type="text" class="inp fcode J_code" placeholder="" orgin="" style="width:155px; height:36px; border:1px solid #CCCCCC;">
+                <button class="fn-fl icode disabled" id="sendSms" style="width:115px; height:35px; background:#F5F5F5; color:#D3D3D3; font-size:13px; border: 1px solid #D3D3D3; margin-left:15px;" disabled="">获取验证码</button>
+              </div>
+     
+            </div>
+           
+            <div class="line liney clearfix">
+              <label class="linel">&nbsp;</label>
+              <div class="liner">
+                <div class="clearfix checkcon">
+                  <p class="fn-fl checktxt">
+                    <input type="checkbox" class="iyes fn-fl J_protocal" style="display:block; margin-top:6px; margin-right:5px;">
+                    <span class="fn-fl" style="font-size:12px;">我已阅读并同意</span><a class="itxt fn-fl" href="#" target="_blank" style="font-size:12px;">《飞牛网服务协议》</a></p>
+                </div>
+                <button style="width:250px; height:40px; background:#D7063B; margin-top:15px; font-size:18px; color:rgba(255,255,255,1); font-weight:600px; border:none;">同意协议并注册</button>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">jQuery(".slideTxtBox").slide({trigger:"click"});</script>
+</body>
+</html>
+<script type="text/javascript">
+//百度统计代码
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fa630f96b6a9dd549675d26373853f7f1' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<!--footer-->
+<div class="site-info" tp-childarea="botinfo" style="margin-top:50px;">
+  <div class="foot-nav" style="background:#F5F5F5;"><a  href="#" >公司介绍</a>|<a  href="#" >联系我们</a>|<a  href="#" >飞牛招聘</a>|<a  href="#" >媒体报道</a>|<a href="#" >热搜索词</a>|<a href="#" >评价中心</a>|<a href="#" >友情链接</a>|<a  href="#" >商家入驻</a>|<a  href="#" >招商标准</a>|<a  href="#" >开放平台</a>|<a href="#" style="cursor:default;text-decoration:none;">企业团购 021-36695538</a>|<a  href="#" style="cursor:default;text-decoration:none;">客服热线 400-920-6565</a></div>
+  <div class="link" style="background:#F5F5F5;">
+    <p><a href="#" target="_blank" style="color: #666;">沪公网安备 31010802001821号</a>　|　<a href="#" target="_blank" style="color: #666;">沪ICP备14034590号</a>　|　<a href="#" target="_blank" style="color: #666;">食品经营许可证 JY13101060025900</a>　|　<a href="#" target="_blank" style="color: #666;">酒类商品零售许可证 沪静酒专字 第0818030108000002号</a></p>
+    <p>出版物经营许可证编号新出发（沪）零字第Z6216号　|　快递业务经营许可证编号：沪邮20131324B　|　<a href="http://img18.fn-mart.com/pic/4e21133d4c1adc27a686/knqnTT5nFzCghdZdjT/79eGmGJaFG0aZx/CsmRslj0F8KAKz_iAAud2ZblLQI424.png" target="_blank" style="color: #666;">营业执照</a></p>
+    <p>Copyright © 2013-2016 飞牛网, All Rights Reserved.</p>
+  </div>
+  <div class="inline-box logowall" style="background:#F5F5F5;" ><a href="#" class="item"><img src="../images/5.png"></a><a href="#"><img src="../images/11.jpg"></a><a href="#" class="item" ><img src="../images/15.jpg"></a><a href="#" class="item" ><img src="../images/12.jpg"></a><a href="#" class="item" ><img src="../images/13.jpg"></a><a href="#" class="item" ><img src="../images/14.jpg"></a><a href="#" class="item" ><img src="../images/6.png"></a></div>
+</div>
+</div>
+</body>
+</html>
